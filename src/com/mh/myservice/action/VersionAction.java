@@ -20,7 +20,7 @@ public class VersionAction extends Action{
 	public Object check() throws ServletException, IOException, SQLException
 	{
 		VersionCheckEntity versionCheckEntity = new VersionCheckEntity();
-		versionCheckEntity.setLastVersion(1);
+		versionCheckEntity.setLastVersion(2);
 		versionCheckEntity.setDownloadUrl("http:www.kengni.com/lalala");
 		versionCheckEntity.setLength(1024000);
 		return createResponseData(200, versionCheckEntity);
