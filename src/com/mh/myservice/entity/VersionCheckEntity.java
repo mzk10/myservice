@@ -5,22 +5,39 @@ public class VersionCheckEntity {
 	private int lastVersion;
 	private String downloadUrl;
 	private int length;
+	private String versionDetail;
+	private String versionName;
+
 	public int getLastVersion() {
 		return lastVersion;
-	}
-	public void setLastVersion(int lastVersion) {
-		this.lastVersion = lastVersion;
 	}
 	public String getDownloadUrl() {
 		return downloadUrl;
 	}
-	public void setDownloadUrl(String downloadUrl) {
-		this.downloadUrl = downloadUrl;
-	}
 	public int getLength() {
 		return length;
+	}
+	public String getVersionDetail() {
+		return versionDetail;
+	}
+	public void setLastVersion(int lastVersion) {
+		this.lastVersion = lastVersion;
+	}
+	public void setDownloadUrl(String downloadUrl) {
+		this.downloadUrl = downloadUrl;
 	}
 	public void setLength(int length) {
 		this.length = length;
 	}
+	public void setVersionDetail(String versionDetail) {
+		this.versionDetail = versionDetail;
+	}
+	public String getVersionName() {
+		return versionName;
+	}
+	public void setVersionName(String versionName) {
+		this.versionName = versionName;
+	}
+	
+	
 }

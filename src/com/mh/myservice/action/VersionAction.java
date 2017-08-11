@@ -20,9 +20,11 @@ public class VersionAction extends Action{
 	public Object check() throws ServletException, IOException, SQLException
 	{
 		VersionCheckEntity versionCheckEntity = new VersionCheckEntity();
-		versionCheckEntity.setLastVersion(2);
-		versionCheckEntity.setDownloadUrl("http:www.kengni.com/lalala");
-		versionCheckEntity.setLength(1024000);
+		versionCheckEntity.setLastVersion(1);
+		versionCheckEntity.setDownloadUrl("http://api.kanfamily.com:8080/myservice/app/myxiezuo_1.apk");
+		versionCheckEntity.setLength(9412686);
+		versionCheckEntity.setVersionName("V0.14Beta");
+		versionCheckEntity.setVersionDetail("增加了嗯嗯嗯功能。;增阿斯蒂芬加了啊啊啊功能。;增发的加了啪啪啪功能。");
 		return createResponseData(200, versionCheckEntity);
 	}
 
