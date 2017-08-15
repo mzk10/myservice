@@ -16,7 +16,7 @@ public abstract class DataBase<T> {
 
 	public DataBase(){
         try {
-        	Connection conn = DriverManager.getConnection("", "", "");
+        	Connection conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/xiezuo", "root", "Wojiushi1");
 //        	Connection conn = DriverManager.getConnection("jdbc:mysql://123.57.46.159:3579/kanfamily", "root", "Wojiushi1");
 			sm = conn.createStatement();
 		} catch (SQLException e) {

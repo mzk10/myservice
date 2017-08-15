@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import javax.servlet.ServletException;
 
 import com.mh.myservice.core.Action;
+import com.mh.myservice.db.dao.VersionCheckDao;
 import com.mh.myservice.entity.VersionCheckEntity;
 
 public class VersionAction extends Action{
@@ -19,13 +20,14 @@ public class VersionAction extends Action{
 	
 	public Object check() throws ServletException, IOException, SQLException
 	{
-		VersionCheckEntity versionCheckEntity = new VersionCheckEntity();
-		versionCheckEntity.setLastVersion(1);
-		versionCheckEntity.setDownloadUrl("http://api.kanfamily.com:8080/myservice/app/myxiezuo_1.apk");
-		versionCheckEntity.setLength(9412686);
-		versionCheckEntity.setVersionName("V0.14Beta");
-		versionCheckEntity.setVersionDetail("增加了嗯嗯嗯功能。;增阿斯蒂芬加了啊啊啊功能。;增发的加了啪啪啪功能。");
-		return createResponseData(200, versionCheckEntity);
+		VersionCheckDao dao = new VersionCheckDao();
+		VersionCheckEntity versionCheckEntity = dao.getLastVersion();
+		if(versionCheckEntity!=null)
+		{
+			return createResponseData(200, versionCheckEntity);
+		}else{
+			return createResponseData(404, null);
+		}
 	}
 
 }

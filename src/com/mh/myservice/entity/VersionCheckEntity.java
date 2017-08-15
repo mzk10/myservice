@@ -8,6 +8,17 @@ public class VersionCheckEntity {
 	private String versionDetail;
 	private String versionName;
 
+	public VersionCheckEntity(){}
+	
+	public VersionCheckEntity(int lastVersion, String downloadUrl, int length, String versionDetail,
+			String versionName) {
+		super();
+		this.lastVersion = lastVersion;
+		this.downloadUrl = downloadUrl;
+		this.length = length;
+		this.versionDetail = versionDetail;
+		this.versionName = versionName;
+	}
 	public int getLastVersion() {
 		return lastVersion;
 	}

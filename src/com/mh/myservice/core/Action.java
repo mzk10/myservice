@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.io.PrintWriter;
 import java.lang.reflect.Method;
-import java.net.URLEncoder;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -32,10 +31,7 @@ import com.mh.myservice.util.Util;
 
 public abstract class Action extends HttpServlet{
 
-	/**
-	 * 
-	 */
-	public static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 	private HttpServletRequest request;
 	private HttpServletResponse response;
 	

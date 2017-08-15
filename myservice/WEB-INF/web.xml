@@ -27,6 +27,14 @@
 		<servlet-name>VersionAction</servlet-name>
 		<url-pattern>/version</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>SettingAction</servlet-name>
+		<servlet-class>com.mh.myservice.action.SettingAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SettingAction</servlet-name>
+		<url-pattern>/setting</url-pattern>
+	</servlet-mapping>
 
 	<!-- <servlet> <servlet-name>****</servlet-name> <servlet-class>****</servlet-class> 
 		</servlet> <servlet-mapping> <servlet-name>****</servlet-name> <url-pattern>****</url-pattern> 
