@@ -8,7 +8,7 @@ import com.mh.myservice.db.DataBase;
 import com.mh.myservice.entity.VersionCheckEntity;
 
 public class VersionCheckDao extends DataBase<VersionCheckEntity> {
-
+	
 	@Override
 	public List<VersionCheckEntity> listData() throws SQLException {
 		return null;
@@ -31,7 +31,7 @@ public class VersionCheckDao extends DataBase<VersionCheckEntity> {
 
 	@Override
 	public int countData() throws SQLException {
-		return 0;
+		return 1;
 	}
 
 	public VersionCheckEntity getLastVersion() {
