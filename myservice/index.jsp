@@ -7,6 +7,6 @@
 <title>标题</title>
 </head>
 <body>
-	<h1 align="center">FUCK!! 40444!!!!　(ノ=Д=)ノ┻━┻</h1>
+	<h1 align="center">FUCK!! 404!!!!　(ノ=Д=)ノ┻━┻</h1>
 </body>
 </html>
