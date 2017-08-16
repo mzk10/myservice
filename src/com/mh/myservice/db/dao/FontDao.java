@@ -17,6 +17,7 @@ public class FontDao extends DataBase<FontEntity>{
 		while(rs.next())
 		{
 			FontEntity font = new FontEntity();
+			font.setId(rs.getInt("id"));
 			font.setName(rs.getString("name"));
 			font.setPath(rs.getString("path"));
 			list.add(font);
