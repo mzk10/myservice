@@ -8,6 +8,7 @@ import java.util.List;
 
 public abstract class DataBase<T> {
 
+	private Connection conn;
 	private Statement sm;
 
 	public Statement getDB() {
@@ -16,8 +17,8 @@ public abstract class DataBase<T> {
 
 	public DataBase(){
         try {
-        	Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3579/xiezuo", "root", "Wojiushi1");
-//        	Connection conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/xiezuo", "root", "Wojiushi1");
+//        	conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3579/xiezuo", "root", "Wojiushi1");
+        	Connection conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/xiezuo", "root", "Wojiushi1");
 			sm = conn.createStatement();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -33,10 +34,19 @@ public abstract class DataBase<T> {
 	public abstract boolean add(T data) throws SQLException;
 	
 	public void close(){
-		try {
-			sm.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+		if (sm!=null) {
+			try {
+				sm.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		if (conn!=null) {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 	};
 	
