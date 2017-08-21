@@ -99,6 +99,9 @@ public abstract class Action extends HttpServlet{
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally{
+			if (w!=null) {
+				w.close();
+			}
 		}
 	}
 	
