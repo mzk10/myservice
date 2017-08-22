@@ -18,6 +18,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -129,13 +130,19 @@ public abstract class Action extends HttpServlet{
 		}
 	}
 	
+	public HttpSession getSession()
+	{
+		HttpSession session = getRequest().getSession();
+		return session;
+	}
+	
     public void getRequestDispatcher(String path, String key, Object value) throws ServletException, IOException
     {
         request.setAttribute(key, value);
         request.getRequestDispatcher(path).forward(request, response);
     }
 	
-	public abstract Object deFault() throws ServletException, IOException, SQLException ;
+	public abstract Object deFault() throws ServletException, IOException, SQLException;
 	
 	/**
 	 * 接收上传的文件

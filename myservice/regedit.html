@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<meta charset="UTF-8" />
+</head>
+<body>
+	<form action="/myservice/user?app=doregist" method="post">
+		<table align="center">
+			<tr>
+				<td>用户名：</td>
+				<td><input name="username" type="text" /></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input name="password" type="password" /></td>
+			</tr>
+			<tr>
+				<td><img alt="" src="http://localhost:8080/myservice/user?app=auth"></td>
+				<td><input name="authcode" type="text" /></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input value="注册" type="submit" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
