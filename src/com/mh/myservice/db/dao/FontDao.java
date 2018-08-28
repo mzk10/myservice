@@ -10,6 +10,10 @@ import com.mh.myservice.entity.FontEntity;
 
 public class FontDao extends DataBase<FontEntity>{
 
+	public FontDao(String dbname) {
+		super("xiezuo");
+	}
+
 	@Override
 	public List<FontEntity> listData() throws SQLException {
 		ResultSet rs = getDB().executeQuery("SELECT * FROM font;");

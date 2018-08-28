@@ -9,6 +9,10 @@ import com.mh.myservice.entity.VersionCheckEntity;
 
 public class VersionCheckDao extends DataBase<VersionCheckEntity> {
 	
+	public VersionCheckDao(String dbname) {
+		super("xiezuo");
+	}
+
 	@Override
 	public List<VersionCheckEntity> listData() throws SQLException {
 		return null;

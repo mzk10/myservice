@@ -26,7 +26,7 @@ public class SettingAction extends Action{
 	
 	public Object fontlist() throws SQLException
 	{
-		FontDao dao = new FontDao();
+		FontDao dao = new FontDao("");
 		List<FontEntity> listData = dao.listData();
 		dao.close();
 		return ResponseData.create(200, listData);

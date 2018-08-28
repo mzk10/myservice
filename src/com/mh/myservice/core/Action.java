@@ -55,24 +55,26 @@ public abstract class Action extends HttpServlet{
 			throws ServletException, IOException {
 		this.request = req;
 		this.response = resp;
-		resp.setHeader("Content-Type", "text/html;charset=utf-8");
-		StringBuffer sb = new StringBuffer();
-		String addr = req.getRemoteAddr();
-		Date date = new Date();
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd,HH:mm:ss");
-		String time_format = format.format(date);
-		sb.append("\n时间：\t");
-		sb.append(time_format);
-		sb.append("\n地址：\t");
-		sb.append(addr);
 		String app = req.getParameter("app");
+		resp.setHeader("Content-Type", "text/html;charset=utf-8");
+//		{
+//			StringBuffer sb = new StringBuffer();
+//			String addr = req.getRemoteAddr();
+//			Date date = new Date();
+//			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd,HH:mm:ss");
+//			String time_format = format.format(date);
+//			sb.append("\n时间：\t");
+//			sb.append(time_format);
+//			sb.append("\n地址：\t");
+//			sb.append(addr);
+//			sb.append("\n接口：\t");
+//			sb.append(req.getRequestURL().toString());
+//			if (app!=null && !"".equals(app)){
+//				sb.append("?app="+app);
+//			}
+//			System.out.println(sb.toString());
+//		}
 		PrintWriter w = null;
-		sb.append("\n接口：\t");
-		sb.append(req.getRequestURL().toString());
-		if (app!=null && !"".equals(app)){
-			sb.append("?app="+app);
-		}
-		System.out.println(sb.toString());
 		if (app==null || "".equals(app)) {
 			Object result = null;
 			try {

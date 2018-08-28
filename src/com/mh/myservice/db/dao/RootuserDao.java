@@ -9,6 +9,10 @@ import com.mh.myservice.entity.Rootuser;
 
 public class RootuserDao extends DataBase<Rootuser>{
 
+	public RootuserDao(String dbname) {
+		super("xiezuo");
+	}
+
 	@Override
 	public List<Rootuser> listData() throws SQLException {
 		// TODO Auto-generated method stub

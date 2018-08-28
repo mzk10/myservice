@@ -35,7 +35,7 @@
 		<servlet-name>SettingAction</servlet-name>
 		<url-pattern>/setting</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>RootuserAction</servlet-name>
 		<servlet-class>com.mh.myservice.action.RootuserAction</servlet-class>
@@ -44,6 +44,16 @@
 		<servlet-name>RootuserAction</servlet-name>
 		<url-pattern>/user</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TestAction</servlet-name>
+		<servlet-class>com.mh.myservice.action.TestAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestAction</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+
 
 	<!-- <servlet> <servlet-name>****</servlet-name> <servlet-class>****</servlet-class> 
 		</servlet> <servlet-mapping> <servlet-name>****</servlet-name> <url-pattern>****</url-pattern> 

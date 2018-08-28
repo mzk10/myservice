@@ -15,10 +15,10 @@ public abstract class DataBase<T> {
 		return sm;
 	}
 
-	public DataBase(){
+	public DataBase(String dbname){
         try {
-        	conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3579/xiezuo", "root", "Wojiushi1");
-//        	Connection conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/xiezuo", "root", "Wojiushi1");
+//        	conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3579/" + dbname, "root", "Wojiushi1");
+        	Connection conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/" + dbname, "root", "Wojiushi1");
 			sm = conn.createStatement();
 		} catch (SQLException e) {
 			e.printStackTrace();
