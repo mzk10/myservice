@@ -93,11 +93,16 @@ public abstract class Action extends HttpServlet{
 		try {
 			Method method = this.getClass().getMethod(app);
 			Object result = method.invoke(this);
-			if (result!=null && !"".equals(result)) {
-				Gson gson = new Gson();
-				String json = gson.toJson(result);
-				w = resp.getWriter();
-				w.print(json);
+			if (result!=null) {
+				if (result instanceof String) {
+					w = resp.getWriter();
+					w.print(result);
+				}else {
+					Gson gson = new Gson();
+					String json = gson.toJson(result);
+					w = resp.getWriter();
+					w.print(json);
+				}
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
