@@ -6,20 +6,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URLEncoder;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;
 
 import com.mh.myservice.core.Action;
-import com.mh.myservice.entity.Log;
-import com.mh.myservice.util.Util;
 
 public class TestAction extends Action {
 
@@ -101,19 +96,20 @@ public class TestAction extends Action {
 	}
 
 	public Object showlog() throws ServletException, IOException, SQLException {
-		String token = (String) getSession().getAttribute("token");
-		if (token == null || "".equals(token)) {
-			sendRedirect("checktoken.html");
-		} else {
-			sendRedirect("showlog.html");
-		}
-		return null;
+//		String token = (String) getSession().getAttribute("token");
+//		if (token == null || "".equals(token)) {
+//			sendRedirect("checktoken.html");
+//		} else {
+			//sendRedirect("showlog.html");
+			String file = loadFileString("showlog.html");
+//		}
+		return file;
 	}
 
 	public Object getfilelist() throws ServletException, IOException, SQLException {
-		String token = (String) getSession().getAttribute("token");
-		if (token != null && "lksjaflkjoihg032opi4oigasdoihvb9wa".equals(token)) {
-			File file = new File("D:/log");
+//		String token = (String) getSession().getAttribute("token");
+//		if (token != null && "lksjaflkjoihg032opi4oigasdoihvb9wa".equals(token)) {
+			File file = new File("E:/log");
 			if ((file.exists() && file.isDirectory()) || file.mkdirs()) {
 			}
 			File[] listFiles = file.listFiles();
@@ -129,15 +125,15 @@ public class TestAction extends Action {
 				}
 				return createResponseData(200, list);
 			}
-		}
-		return createResponseData(204, null);
+//		}
+		return createResponseData(203, null);
 	}
 
 	public Object getlogfile() throws ServletException, IOException, SQLException {
-		String token = (String) getSession().getAttribute("token");
-		if (token != null && "lksjaflkjoihg032opi4oigasdoihvb9wa".equals(token)) {
+//		String token = (String) getSession().getAttribute("token");
+//		if (token != null && "lksjaflkjoihg032opi4oigasdoihvb9wa".equals(token)) {
 			String name = getParameter("filename");
-			File file = new File("D:/log");
+			File file = new File("E:/log");
 			if ((file.exists() && file.isDirectory()) || file.mkdirs()) {
 			}
 			File[] listFiles = file.listFiles();
@@ -162,15 +158,15 @@ public class TestAction extends Action {
 					}
 				}
 			}
-		}
-		return null;
+//		}
+		return createResponseData(203, null);
 	}
 
 	private synchronized static void saveLog(final String msg, final String name) {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
-				File dir = new File("D:/log/");
+				File dir = new File("E:/log/");
 				if (!dir.exists()) {
 					dir.mkdirs();
 				}
