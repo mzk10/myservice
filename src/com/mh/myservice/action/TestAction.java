@@ -46,6 +46,8 @@ public class TestAction extends Action {
 		 * "UTF-8");
 		 */
 		String ip = getRequest().getRemoteAddr();
+		System.out.println("ip="+ip);
+		System.out.println("log="+log);
 		saveLog(log, "log_" + ip + ".log");
 		return null;
 	}
