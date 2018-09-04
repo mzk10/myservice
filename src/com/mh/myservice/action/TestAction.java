@@ -32,9 +32,7 @@ public class TestAction extends Action {
 		String devices = getParameter("devices");
 		String log = getParameter("log");
 		String ip = getRequest().getRemoteAddr();
-		
 		String realPath = getServletContext().getRealPath("log");
-		System.out.println(realPath);
 		saveLog(realPath, log, devices + "_" + ip + ".log");
 		return null;
 	}
@@ -45,7 +43,7 @@ public class TestAction extends Action {
 		String ip = getRequest().getRemoteAddr();
 		String realPath = getServletContext().getRealPath("err");
 		saveLog(realPath, log, devices + "_" + ip + ".err");
-		return null;
+		return createResponseData(200, null);
 	}
 
 	public Object showlog() throws ServletException, IOException, SQLException {
@@ -54,8 +52,24 @@ public class TestAction extends Action {
 		return null;
 	}
 
-	public Object getfilelist() throws ServletException, IOException, SQLException {
+	public Object getloglist() throws ServletException, IOException, SQLException {
 		String realPath = getServletContext().getRealPath("log");
+		File file = new File(realPath);
+		if ((file.exists() && file.isDirectory()) || file.mkdirs()) {
+		}
+		File[] listFiles = file.listFiles();
+		if (listFiles != null) {
+			List<String> list = new ArrayList<>();
+			for (File file2 : listFiles) {
+				list.add(file2.getName());
+			}
+			return createResponseData(200, list);
+		}
+		return createResponseData(203, null);
+	}
+	
+	public Object geterrlist() throws ServletException, IOException, SQLException {
+		String realPath = getServletContext().getRealPath("err");
 		File file = new File(realPath);
 		if ((file.exists() && file.isDirectory()) || file.mkdirs()) {
 		}
@@ -73,6 +87,34 @@ public class TestAction extends Action {
 	public Object getlogfile() throws ServletException, IOException, SQLException {
 		String name = getParameter("filename");
 		String realPath = getServletContext().getRealPath("log");
+		File file = new File(realPath);
+		if ((file.exists() && file.isDirectory()) || file.mkdirs()) {
+		}
+		File[] listFiles = file.listFiles();
+		if (listFiles != null) {
+			for (File file2 : listFiles) {
+				String filename = file2.getName();
+				if (filename.equals(name)) {
+					StringBuilder sb = new StringBuilder();
+					FileInputStream fis = new FileInputStream(file2);
+					InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
+					BufferedReader br = new BufferedReader(isr);
+					while (br.ready()) {
+						sb.append(br.readLine() + "</br>");
+					}
+					br.close();
+					isr.close();
+					fis.close();
+					return createResponseData(200, sb.toString());
+				}
+			}
+		}
+		return createResponseData(203, null);
+	}
+	
+	public Object geterrfile() throws ServletException, IOException, SQLException {
+		String name = getParameter("filename");
+		String realPath = getServletContext().getRealPath("err");
 		File file = new File(realPath);
 		if ((file.exists() && file.isDirectory()) || file.mkdirs()) {
 		}

@@ -1,27 +1,27 @@
 $(document).ready(function() {
-	var loglist;
-	$.post("test?app=getloglist", {}, function(data) {
+	var errlist;
+	$.post("test?app=geterrlist", {}, function(data) {
 		var code = data["code"];
 		if (code == 200) {
-			loglist = data["data"];
-			var opt = "<option value=\"-1\">选择日志</option>";
-			for (var i = 0; i < loglist.length; i++) {
-				var f = loglist[i];
+			errlist = data["data"];
+			var opt = "<option value=\"-1\">选择崩溃日志</option>";
+			for (var i = 0; i < errlist.length; i++) {
+				var f = errlist[i];
 				opt += "<option value=\"" + i + "\">" + f + "</option>"
 			}
-			$("#logchose").html(opt);
+			$("#errchose").html(opt);
 		} else {
 			var info = data["info"];
 			alert(info);
 		}
 	}, "json");
 
-	$("#logchose").change(function() {
-		var val = $("#logchose option:selected").val();
+	$("#errchose").change(function() {
+		var val = $("#errchose option:selected").val();
 		if (val >= 0) {
-			var file = loglist[val];
+			var file = errlist[val];
 			$.get("test", {
-				"app" : "getlogfile",
+				"app" : "geterrfile",
 				"filename" : file
 			}, function(data) {
 				var code = data["code"];
