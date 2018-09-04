@@ -29,31 +29,28 @@ public class TestAction extends Action {
 	}
 
 	public Object log() throws ServletException, IOException, SQLException {
+		String devices = getParameter("devices");
 		String log = getParameter("log");
 		String ip = getRequest().getRemoteAddr();
-		System.out.println("ip=" + ip);
-		System.out.println("log=" + log);
 		
 		String realPath = getServletContext().getRealPath("log");
 		System.out.println(realPath);
-		saveLog(realPath, log, "log_" + ip + ".log");
+		saveLog(realPath, log, devices + "_" + ip + ".log");
 		return null;
 	}
 
 	public Object err() throws ServletException, IOException, SQLException {
 		String devices = getParameter("devices");
-		String msg = getParameter("log");
+		String log = getParameter("log");
 		String ip = getRequest().getRemoteAddr();
 		String realPath = getServletContext().getRealPath("err");
-		saveLog(realPath, msg, devices + "_" + ip + ".log");
+		saveLog(realPath, log, devices + "_" + ip + ".err");
 		return null;
 	}
 
 	public Object showlog() throws ServletException, IOException, SQLException {
 		RequestDispatcher dispatcher = getRequest().getRequestDispatcher("/WEB-INF/html/showlog.html");
 		dispatcher.forward(getRequest(), getResponse());
-//		String file = loadFileString("showlog.html");
-//		return file;
 		return null;
 	}
 
