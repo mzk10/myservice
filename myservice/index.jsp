@@ -7,6 +7,11 @@
 <title>标题</title>
 </head>
 <body>
-	<h1 align="center">FUCK!! 404!!!!　(ノ=Д=)ノ┻━┻</h1>
+	<table align="center">
+		<tr><td align="center"><h1 align="center">FU♂CK ♂ Y♂OU 404!!!!</h1></td></tr>
+		<tr><td align="center"><img align="center" alt="deep dark fantansy" src="img/404.png"></td></tr>
+	</table>
+	
+	
 </body>
 </html>
