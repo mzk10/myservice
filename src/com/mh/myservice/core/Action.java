@@ -1,34 +1,25 @@
 package com.mh.myservice.core;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.LineNumberReader;
-import java.io.PrintWriter;
-import java.lang.reflect.Method;
-import java.sql.SQLException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import com.google.gson.Gson;
+import com.mh.myservice.entity.FileInfoEntity;
+import com.mh.myservice.entity.ResponseData;
+import com.mh.myservice.util.NameValues;
+import com.mh.myservice.util.Util;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileUploadException;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
-import com.google.gson.Gson;
-import com.mh.myservice.entity.ResponseData;
-import com.mh.myservice.util.NameValues;
-import com.mh.myservice.util.Util;
+import java.io.*;
+import java.lang.reflect.Method;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Action extends HttpServlet{
 
@@ -159,7 +150,7 @@ public abstract class Action extends HttpServlet{
 	 * @throws FileUploadException
 	 * @throws IOException
 	 */
-	public List<FileInfo> uploadFile(String field, String dir) throws FileUploadException, IOException{
+	public List<FileInfoEntity> uploadFile(String field, String dir) throws FileUploadException, IOException{
 		String realDir = getRequest().getServletContext().getRealPath(NameValues.getConfig(NameValues.DEFAULT_UPLOAD_PATH)+(dir==null?"":dir));
 		File file = new File(realDir);
 		if (!file.exists()) {
@@ -169,7 +160,7 @@ public abstract class Action extends HttpServlet{
 		ServletFileUpload upload = new ServletFileUpload(factory);
 		List<FileItem> list = upload.parseRequest(getRequest());
 		if (list!=null) {
-			List<FileInfo> resultList = new ArrayList<FileInfo>();
+			List<FileInfoEntity> resultList = new ArrayList<>();
 			System.out.println("文件数为:"+list.size());
 			for (int i = 0; i < list.size(); i++) {
 				FileItem fileItem = list.get(i);
@@ -194,41 +185,17 @@ public abstract class Action extends HttpServlet{
 				fos.flush();
 				fos.close();
 				is.close();
-				FileInfo info = new FileInfo();
-				info.filedir = dir;
-				info.filename = name;
-				info.filesize = size;
+				FileInfoEntity info = new FileInfoEntity();
+				info.setFiledir(dir == null ? "" : dir);
+				info.setFilename(name);
+				info.setFilesize(size);
 				resultList.add(info);
 			}
 			return resultList;
 		}
 		return null;
 	}
-	
-	public class FileInfo{
-		private String filedir;
-		private String filename;
-		private long filesize;
-		public String getFiledir() {
-			return filedir;
-		}
-		public void setFiledir(String filedir) {
-			this.filedir = filedir;
-		}
-		public String getFilename() {
-			return filename;
-		}
-		public void setFilename(String filename) {
-			this.filename = filename;
-		}
-		public long getFilesize() {
-			return filesize;
-		}
-		public void setFilesize(long filesize) {
-			this.filesize = filesize;
-		}
-	}
-	
+
 	/**
 	 * 获得客户端IP地址
 	 * 

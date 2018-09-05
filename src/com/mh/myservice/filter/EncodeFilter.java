@@ -14,8 +14,8 @@ public class EncodeFilter implements Filter {
 	private String encoding;
 
 	@Override
-	public void destroy() {
-		
+	public void init(FilterConfig arg0) throws ServletException {
+		this.encoding = arg0.getInitParameter("encoding");
 	}
 
 	@Override
@@ -27,9 +27,8 @@ public class EncodeFilter implements Filter {
 	}
 
 	@Override
-	public void init(FilterConfig arg0) throws ServletException {
-		this.encoding = arg0.getInitParameter("encoding");
+	public void destroy() {
+
 	}
-	
 	
 }

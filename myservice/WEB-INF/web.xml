@@ -54,6 +54,15 @@
 		<url-pattern>/test</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>UploadAction</servlet-name>
+		<servlet-class>com.mh.myservice.action.UploadAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadAction</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+
 
 	<!-- <servlet> <servlet-name>****</servlet-name> <servlet-class>****</servlet-class> 
 		</servlet> <servlet-mapping> <servlet-name>****</servlet-name> <url-pattern>****</url-pattern> 
