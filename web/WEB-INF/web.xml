@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>myservice</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<filter>
+		<filter-name>EncodeFilter</filter-name>
+		<filter-class>com.mh.myservice.filter.EncodeFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>utf-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodeFilter</filter-name>
+		<url-pattern>*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>VersionAction</servlet-name>
+		<servlet-class>com.mh.myservice.action.VersionAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VersionAction</servlet-name>
+		<url-pattern>/version</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SettingAction</servlet-name>
+		<servlet-class>com.mh.myservice.action.SettingAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SettingAction</servlet-name>
+		<url-pattern>/setting</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RootuserAction</servlet-name>
+		<servlet-class>com.mh.myservice.action.RootuserAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RootuserAction</servlet-name>
+		<url-pattern>/user</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TestAction</servlet-name>
+		<servlet-class>com.mh.myservice.action.TestAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestAction</servlet-name>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UploadAction</servlet-name>
+		<servlet-class>com.mh.myservice.action.UploadAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadAction</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- <servlet> <servlet-name>****</servlet-name> <servlet-class>****</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>****</servlet-name> <url-pattern>****</url-pattern> 
+		</servlet-mapping> -->
+
+</web-app>
