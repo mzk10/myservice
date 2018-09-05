@@ -1,13 +1,13 @@
 package com.mh.myservice.action;
 
-import java.io.IOException;
-import java.sql.SQLException;
-
-import javax.servlet.ServletException;
 
 import com.mh.myservice.core.Action;
 import com.mh.myservice.db.dao.VersionCheckDao;
 import com.mh.myservice.entity.VersionCheckEntity;
+
+import javax.servlet.ServletException;
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class VersionAction extends Action{
 
