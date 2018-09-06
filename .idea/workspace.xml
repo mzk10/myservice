@@ -6,7 +6,63 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db18eec7-294a-471d-bd2c-2ec3179cc78a" name="Default Changelist" comment="" />
+    <list default="true" id="db18eec7-294a-471d-bd2c-2ec3179cc78a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/code.val" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/RootuserAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/SettingAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/TestAction$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/TestAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/UploadAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/VersionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/core/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/DataBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/FontDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/RootuserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/TestLogDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/VersionCheckDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/BaseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/FileInfoEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/FontEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/Log.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/ResponseData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/Rootuser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/TestLogEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VersionCheckEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/filter/EncodeFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/AuthCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/DES3Decoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/DES3Encrypter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Encrypter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/NameValues.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/config.val" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/html/regedit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/html/showlog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/html/upload.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/commons-codec-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/commons-io-2.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/commons-logging-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/gson-1.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/httpclient-4.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/httpclient-cache-4.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/httpcore-4.1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/httpmime-4.1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/json.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/jsp-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/mysql-connector-java-5.1.35-bin.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/lib/servlet-api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/img/404.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/js/jquery-1.7.2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/js/showerr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/js/showlog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/js/timp.js" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,6 +145,24 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-2125956273">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FavoritesManager">
     <favorites_list name="myservice" />
@@ -98,20 +172,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/UploadAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+            <state relative-caret-position="215">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myservice/WEB-INF/html/upload.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -143,6 +208,9 @@
     <replaceStrings>
       <replace>FileInfoEntity</replace>
     </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -200,83 +268,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="font" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="img" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="WEB-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="WEB-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="html" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -311,7 +309,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,7 +316,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/myservice/WEB-INF/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -349,8 +346,6 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 7.0.63" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.63" ALTERNATIVE_JRE_ENABLED="false" show_console_on_std_err="true" show_console_on_std_out="true">
-      <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/myservice/" />
       <option name="SHOW_DIALOG_ON_UPDATE" value="false" />
       <deployment>
         <artifact name="web:war exploded">
@@ -531,17 +526,17 @@
       <workItem from="1536134687075" duration="123000" />
       <workItem from="1536136465447" duration="3284000" />
       <workItem from="1536140490022" duration="17000" />
+      <workItem from="1536217471609" duration="330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12570000" />
+    <option name="totallyTimeSpent" value="12900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49307957" visible="true" weight="0.20895523" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49307957" visible="true" weight="0.21108742" />
       <window_info id="Structure" order="1" sideWeight="0.50179857" side_tool="true" weight="0.20042644" />
       <window_info id="Web" order="2" sideWeight="0.50606585" side_tool="true" weight="0.20682302" />
       <window_info id="Designer" order="3" />
@@ -549,7 +544,7 @@
       <window_info id="Favorites" order="5" sideWeight="0.50179857" side_tool="true" weight="0.20042644" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38286334" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.38219327" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4251627" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -635,9 +630,7 @@
     <entry file="file://$PROJECT_DIR$/src/config.val">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/myservice/WEB-INF/html/test.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/myservice/WEB-INF/html/test.html" />
     <entry file="file://$PROJECT_DIR$/myservice/WEB-INF/html/showlog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -659,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="52" column="20" lean-forward="true" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/FileInfoEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -680,16 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/UploadAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myservice/WEB-INF/html/upload.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -701,6 +677,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2413">
           <caret line="150" column="26" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/UploadAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -747,7 +740,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -764,6 +757,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
