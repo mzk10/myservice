@@ -30,7 +30,7 @@ public class TestAction extends Action {
         String devices = getParameter("devices");
         String log = getParameter("log");
         String ip = getRequest().getRemoteAddr();
-        String realPath = getServletContext().getRealPath("err");
+        String realPath = getServletContext().getRealPath("log");
         saveLog(realPath, log, devices + "_" + ip + ".err");
         return createResponseData(200, null);
     }
@@ -67,24 +67,23 @@ public class TestAction extends Action {
         return getFileList(realPath);
     }
 
-    public Object geterrlist() {
+    /*public Object geterrlist() {
         String realPath = getServletContext().getRealPath("err");
         return getFileList(realPath);
-    }
+    }*/
 
     private Object getFileList(String realPath) {
         File file = new File(realPath);
         if ((file.exists() && file.isDirectory()) || file.mkdirs()) {
         }
         File[] listFiles = file.listFiles();
+        List<String> list = new ArrayList<>();
         if (listFiles != null) {
-            List<String> list = new ArrayList<>();
             for (File file2 : listFiles) {
                 list.add(file2.getName());
             }
-            return createResponseData(200, list);
         }
-        return createResponseData(203, null);
+        return createResponseData(200, list);
     }
 
     public Object getlogfile() throws IOException {
@@ -92,10 +91,10 @@ public class TestAction extends Action {
         return getFileText(realPath);
     }
 
-    public Object geterrfile() throws IOException {
+    /*public Object geterrfile() throws IOException {
         String realPath = getServletContext().getRealPath("err");
         return getFileText(realPath);
-    }
+    }*/
 
     private Object getFileText(String realPath) throws IOException {
         String name = getParameter("filename");
@@ -119,6 +118,19 @@ public class TestAction extends Action {
                     fis.close();
                     return createResponseData(200, sb.toString());
                 }
+            }
+        }
+        return createResponseData(200, "");
+    }
+
+    public Object deletefile() {
+        String name = getParameter("filename");
+        System.out.println("filename=" + name);
+        if (name!=null && !"".equals(name)){
+            String log = getServletContext().getRealPath("log");
+            File file = new File(log, name);
+            if (file.exists() && file.delete()){
+                return getloglist();
             }
         }
         return createResponseData(203, null);
