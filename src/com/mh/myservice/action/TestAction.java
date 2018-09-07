@@ -1,35 +1,23 @@
 package com.mh.myservice.action;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URLDecoder;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import com.mh.myservice.core.Action;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-
-import com.mh.myservice.core.Action;
+import java.io.*;
+import java.net.URLDecoder;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestAction extends Action {
 
-    /**
-     *
-     */
-    private static final long serialVersionUID = 1L;
-
     @Override
-    public Object deFault() throws ServletException, IOException, SQLException {
+    public Object deFault() throws IOException {
         getResponse().sendRedirect("test.apk");
         return null;
     }
 
-    public Object log() throws ServletException, IOException, SQLException {
+    public Object log() throws IOException {
         String devices = getParameter("devices");
         String log = getParameter("log");
         String ip = getRequest().getRemoteAddr();
@@ -38,7 +26,7 @@ public class TestAction extends Action {
         return null;
     }
 
-    public Object err() throws ServletException, IOException, SQLException {
+    public Object err() {
         String devices = getParameter("devices");
         String log = getParameter("log");
         String ip = getRequest().getRemoteAddr();
@@ -47,18 +35,39 @@ public class TestAction extends Action {
         return createResponseData(200, null);
     }
 
-    public Object showlog() throws ServletException, IOException, SQLException {
-        RequestDispatcher dispatcher = getRequest().getRequestDispatcher("/WEB-INF/html/showlog.html");
-        dispatcher.forward(getRequest(), getResponse());
+    private static final String TOKEN = "weoiurwoieurtiowutoiuer";
+
+    public Object showlog() throws ServletException, IOException {
+        String token = (String) getRequest().getSession().getAttribute("token");
+        if (TOKEN.equals(token)){
+            checklog("/WEB-INF/html/showlog.html");
+        }else{
+            String password = getParameter("password");
+            if (password==null || "".equals(password)){
+                checklog("/WEB-INF/html/checklog.html");
+            }else {
+                if ("9527".equals(password)){
+                    getRequest().getSession().setAttribute("token", TOKEN);
+                    checklog("/WEB-INF/html/showlog.html");
+                }else{
+                    checklog("/WEB-INF/html/checklog.html");
+                }
+            }
+        }
         return null;
     }
 
-    public Object getloglist() throws ServletException, IOException, SQLException {
+    private void checklog(String s) throws ServletException, IOException {
+        RequestDispatcher dispatcher = getRequest().getRequestDispatcher(s);
+        dispatcher.forward(getRequest(), getResponse());
+    }
+
+    public Object getloglist() {
         String realPath = getServletContext().getRealPath("log");
         return getFileList(realPath);
     }
 
-    public Object geterrlist() throws ServletException, IOException, SQLException {
+    public Object geterrlist() {
         String realPath = getServletContext().getRealPath("err");
         return getFileList(realPath);
     }
@@ -78,12 +87,12 @@ public class TestAction extends Action {
         return createResponseData(203, null);
     }
 
-    public Object getlogfile() throws ServletException, IOException, SQLException {
+    public Object getlogfile() throws IOException {
         String realPath = getServletContext().getRealPath("log");
         return getFileText(realPath);
     }
 
-    public Object geterrfile() throws ServletException, IOException, SQLException {
+    public Object geterrfile() throws IOException {
         String realPath = getServletContext().getRealPath("err");
         return getFileText(realPath);
     }
