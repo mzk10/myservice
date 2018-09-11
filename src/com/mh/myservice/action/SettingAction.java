@@ -1,15 +1,14 @@
 package com.mh.myservice.action;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
-
-import javax.servlet.ServletException;
-
 import com.mh.myservice.core.Action;
 import com.mh.myservice.db.dao.FontDao;
 import com.mh.myservice.entity.FontEntity;
 import com.mh.myservice.entity.ResponseData;
+
+import javax.servlet.ServletException;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 
 public class SettingAction extends Action{
 
@@ -26,7 +25,7 @@ public class SettingAction extends Action{
 	
 	public Object fontlist() throws SQLException
 	{
-		FontDao dao = new FontDao("");
+		FontDao dao = new FontDao();
 		List<FontEntity> listData = dao.listData();
 		dao.close();
 		return ResponseData.create(200, listData);

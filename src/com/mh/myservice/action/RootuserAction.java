@@ -43,7 +43,7 @@ public class RootuserAction extends Action{
 			String username = getParameter("username");
 			String password = getParameter("password");
 			
-			RootuserDao dao = new RootuserDao("");
+			RootuserDao dao = new RootuserDao();
 			Rootuser data = new Rootuser();
 			data.setUsername(username);
 			data.setPassword(password);

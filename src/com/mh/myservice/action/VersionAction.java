@@ -20,7 +20,7 @@ public class VersionAction extends Action{
 	
 	public Object check() throws ServletException, IOException, SQLException
 	{
-		VersionCheckDao dao = new VersionCheckDao("");
+		VersionCheckDao dao = new VersionCheckDao();
 		VersionCheckEntity versionCheckEntity = dao.getLastVersion();
 		dao.close();
 		if(versionCheckEntity!=null)
