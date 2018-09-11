@@ -1,15 +1,15 @@
 package com.mh.myservice.db.dao;
 
+import com.mh.myservice.db.DataBase;
+import com.mh.myservice.entity.Rootuser;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.mh.myservice.db.DataBase;
-import com.mh.myservice.entity.Rootuser;
-
 public class RootuserDao extends DataBase<Rootuser>{
 
-	public RootuserDao(String dbname) {
+	public RootuserDao() {
 		super("xiezuo");
 	}
 

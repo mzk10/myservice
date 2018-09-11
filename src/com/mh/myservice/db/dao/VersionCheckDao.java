@@ -1,15 +1,15 @@
 package com.mh.myservice.db.dao;
 
+import com.mh.myservice.db.DataBase;
+import com.mh.myservice.entity.VersionCheckEntity;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-import com.mh.myservice.db.DataBase;
-import com.mh.myservice.entity.VersionCheckEntity;
-
 public class VersionCheckDao extends DataBase<VersionCheckEntity> {
 	
-	public VersionCheckDao(String dbname) {
+	public VersionCheckDao() {
 		super("xiezuo");
 	}
 

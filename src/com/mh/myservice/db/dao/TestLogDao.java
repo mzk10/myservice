@@ -1,14 +1,14 @@
 package com.mh.myservice.db.dao;
 
-import java.sql.SQLException;
-import java.util.List;
-
 import com.mh.myservice.db.DataBase;
 import com.mh.myservice.entity.TestLogEntity;
 
+import java.sql.SQLException;
+import java.util.List;
+
 public class TestLogDao extends DataBase<TestLogEntity>{
 
-	public TestLogDao(String dbname) {
+	public TestLogDao() {
 		super("test");
 	}
 

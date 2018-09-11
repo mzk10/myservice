@@ -28,4 +28,14 @@ public class UploadAction extends Action {
         return createResponseData(204, null);
     }
 
+    public Object testUploadfile() throws IOException {
+        try {
+            List<FileInfoEntity> fileInfos = uploadFile("upfile2", "test2");
+            return createResponseData(200, fileInfos);
+        } catch (FileUploadException e) {
+            e.printStackTrace();
+        }
+        return createResponseData(204, null);
+    }
+
 }

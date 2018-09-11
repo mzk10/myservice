@@ -1,16 +1,16 @@
 package com.mh.myservice.db.dao;
 
+import com.mh.myservice.db.DataBase;
+import com.mh.myservice.entity.FontEntity;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mh.myservice.db.DataBase;
-import com.mh.myservice.entity.FontEntity;
-
 public class FontDao extends DataBase<FontEntity>{
 
-	public FontDao(String dbname) {
+	public FontDao() {
 		super("xiezuo");
 	}
 
