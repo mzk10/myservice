@@ -24,11 +24,12 @@ public class TestAction extends Action {
         String log = getParameter("log");
         String ip = getRequest().getRemoteAddr();
         String realPath = getServletContext().getRealPath("log");
-        saveLog(realPath, log, devices + "_" + ip + ".log");
+        String msg = saveLog(realPath, log, devices + "_" + ip + ".log");
         HashMap<String, String> m = new HashMap<>();
         m.put("devices", devices + ip);
         m.put("log", log);
         m.put("realPath", realPath);
+        m.put("msg", msg);
         return createResponseData(200, m);
     }
 
@@ -117,7 +118,7 @@ public class TestAction extends Action {
         return createResponseData(203, null);
     }
 
-    private synchronized static void saveLog(final String dir, final String msg, final String name) {
+    private synchronized static String saveLog(final String dir, final String msg, final String name) {
         File file_dir = new File(dir);
         if (!file_dir.exists()) {
             boolean mkdirs = file_dir.mkdirs();
@@ -129,9 +130,11 @@ public class TestAction extends Action {
                     fos.flush();
                 } catch (Exception e) {
                     e.printStackTrace();
+                    return e.getMessage();
                 }
             }
         }
+        return "OK";
 
     }
 
