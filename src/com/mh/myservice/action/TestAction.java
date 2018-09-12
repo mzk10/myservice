@@ -120,17 +120,24 @@ public class TestAction extends Action {
 
     private synchronized static String saveLog(final String dir, final String msg, final String name) {
         File file_dir = new File(dir);
-        if (!file_dir.exists()) {
-            boolean mkdirs = file_dir.mkdirs();
-            if (mkdirs) {
-                File file = new File(file_dir, name);
-                try (FileOutputStream fos = new FileOutputStream(file, true)) {
-                    byte[] b = msg.getBytes(StandardCharsets.UTF_8);
-                    fos.write(b);
-                    fos.flush();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                    return e.getMessage();
+        if (file_dir.exists() || file_dir.mkdirs()) {
+            File file = new File(file_dir, name);
+            FileOutputStream fos = null;
+            try {
+                fos = new FileOutputStream(file, true);
+                byte[] b = msg.getBytes(StandardCharsets.UTF_8);
+                fos.write(b);
+                fos.flush();
+            } catch (Exception e) {
+                e.printStackTrace();
+                return e.getMessage();
+            } finally {
+                if (fos != null) {
+                    try {
+                        fos.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
