@@ -4,9 +4,9 @@ import com.mh.myservice.core.Action;
 
 import javax.servlet.ServletException;
 import java.io.*;
-import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class TestAction extends Action {
@@ -24,8 +24,12 @@ public class TestAction extends Action {
         String log = getParameter("log");
         String ip = getRequest().getRemoteAddr();
         String realPath = getServletContext().getRealPath("log");
-        saveLog(realPath, URLDecoder.decode(log, "UTF-8"), devices + "_" + ip + ".log");
-        return createResponseData(200, null);
+        saveLog(realPath, log, devices + "_" + ip + ".log");
+        HashMap<String, String> m = new HashMap<>();
+        m.put("devices", devices + ip);
+        m.put("log", log);
+        m.put("realPath", realPath);
+        return createResponseData(200, m);
     }
 
     public Object err() {
