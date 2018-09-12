@@ -25,7 +25,7 @@ public class TestAction extends Action {
         String ip = getRequest().getRemoteAddr();
         String realPath = getServletContext().getRealPath("log");
         saveLog(realPath, URLDecoder.decode(log, "UTF-8"), devices + "_" + ip + ".log");
-        return null;
+        return createResponseData(200, null);
     }
 
     public Object err() {
