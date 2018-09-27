@@ -11,14 +11,14 @@ public abstract class DataBase<T> {
 	private Connection conn;
 	private Statement sm;
 
-	public Statement getDB() {
+	protected Statement getDB() {
 		return sm;
 	}
 
 	public DataBase(String dbname){
         try {
 //        	conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3579/" + dbname, "root", "Wojiushi1");
-        	Connection conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/" + dbname, "root", "Wojiushi1");
+        	conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/" + dbname, "mzk10", "Wojiushi1");
 			sm = conn.createStatement();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -26,13 +26,11 @@ public abstract class DataBase<T> {
 	}
 	
 	public abstract List<T> listData() throws SQLException;
-	
 	public abstract T selectData(T data) throws SQLException;
-	
-	public abstract boolean update(T data) throws SQLException;
-	
 	public abstract boolean add(T data) throws SQLException;
-	
+	public abstract boolean delete(T data) throws SQLException;
+	public abstract boolean update(T data) throws SQLException;
+
 	public void close(){
 		if (sm!=null) {
 			try {

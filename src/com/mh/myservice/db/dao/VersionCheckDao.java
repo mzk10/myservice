@@ -34,6 +34,11 @@ public class VersionCheckDao extends DataBase<VersionCheckEntity> {
 	}
 
 	@Override
+	public boolean delete(VersionCheckEntity data) throws SQLException {
+		return false;
+	}
+
+	@Override
 	public int countData() throws SQLException {
 		return 1;
 	}

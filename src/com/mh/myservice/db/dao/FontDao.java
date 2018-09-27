@@ -45,6 +45,11 @@ public class FontDao extends DataBase<FontEntity>{
 	}
 
 	@Override
+	public boolean delete(FontEntity data) throws SQLException {
+		return false;
+	}
+
+	@Override
 	public int countData() throws SQLException {
 		return 0;
 	}

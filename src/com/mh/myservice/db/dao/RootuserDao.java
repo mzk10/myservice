@@ -51,6 +51,11 @@ public class RootuserDao extends DataBase<Rootuser>{
 	}
 
 	@Override
+	public boolean delete(Rootuser data) throws SQLException {
+		return false;
+	}
+
+	@Override
 	public int countData() throws SQLException {
 		// TODO Auto-generated method stub
 		return 0;
