@@ -8,6 +8,7 @@ public class TestLogEntity {
 	private int type;
 	private long time;
 	private String log;
+	private int selected;
 
 	public int getId() {
 		return id;
@@ -55,5 +56,13 @@ public class TestLogEntity {
 
 	public void setLog(String log) {
 		this.log = log;
+	}
+
+	public int getSelected() {
+		return selected;
+	}
+
+	public void setSelected(int selected) {
+		this.selected = selected;
 	}
 }

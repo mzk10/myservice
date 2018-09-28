@@ -5,7 +5,7 @@ import com.mh.myservice.util.NameValues;
 
 public class ResponseData extends BaseEntity{
 
-	private ResponseData(){};
+	private ResponseData(){}
 	
 	public static ResponseData create(int code,Object data){
 		ResponseData result = new ResponseData();

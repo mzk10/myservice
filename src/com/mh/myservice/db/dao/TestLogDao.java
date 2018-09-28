@@ -21,12 +21,12 @@ public class TestLogDao extends DataBase<TestLogEntity>{
 	}
 
 	public List<TestLogEntity> getGroup(String coloum) throws SQLException {
-		String sql = "SELECT * FROM `log` GROUP BY `{coloum}`;";
+		String sql = "SELECT id,devices,ip,time,type FROM `log` GROUP BY `{coloum}`;";
 		sql = sql.replace("{coloum}", coloum);
         ResultSet result = getDB().executeQuery(sql);
         List<TestLogEntity> list = new ArrayList<>();
         while (result.next()){
-            TestLogEntity entity = getTestLogEntity(result);
+            TestLogEntity entity = getGroup(result);
             list.add(entity);
         }
         return list;
@@ -43,6 +43,17 @@ public class TestLogDao extends DataBase<TestLogEntity>{
             list.add(entity);
         }
         return list;
+    }
+
+    private TestLogEntity getGroup(ResultSet result) throws SQLException {
+        TestLogEntity entity = new TestLogEntity();
+        entity.setId(result.getInt("id"));
+        entity.setType(result.getInt("type"));
+        entity.setDevices(result.getString("devices"));
+        entity.setIp(result.getString("ip"));
+        //entity.setLog(result.getString("log"));
+        entity.setTime(result.getLong("time"));
+        return entity;
     }
 
     private TestLogEntity getTestLogEntity(ResultSet result) throws SQLException {
