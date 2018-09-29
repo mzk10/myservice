@@ -7,6 +7,7 @@ import com.mh.myservice.entity.TestLogEntity;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,12 +33,13 @@ public class TestAction extends Action {
     private ResponseData save(int type) {
         String devices = getParameter("devices");
         String log = getParameter("log");
+        String time = getParameter("time");
         log = log.replaceAll("\r\n", "</br>")
                 .replaceAll("\n", "</br>");
         String ip = getRequest().getRemoteAddr();
         TestLogDao dao = new TestLogDao();
         TestLogEntity data = new TestLogEntity();
-        data.setTime(System.currentTimeMillis());
+        data.setTime(time);
         data.setDevices(devices);
         data.setIp(ip);
         data.setType(type);
@@ -47,6 +49,8 @@ public class TestAction extends Action {
             dao.close();
             return createResponseData(200, null);
         } catch (SQLException e) {
+            return createResponseData(203, null);
+        } catch (UnsupportedEncodingException e) {
             return createResponseData(203, null);
         }
     }
@@ -98,7 +102,7 @@ public class TestAction extends Action {
         goPage("/WEB-INF/jsp/showlog.jsp");
     }
 
-    public Object getloglist() {
+    /*public Object getloglist() {
         TestLogDao dao = new TestLogDao();
         try {
             List<TestLogEntity> devices = dao.getGroup("devices");
@@ -112,7 +116,7 @@ public class TestAction extends Action {
         } finally {
             dao.close();
         }
-    }
+    }*/
 
     /*public Object getlogfile() {
         String name = getParameter("filename");

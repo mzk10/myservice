@@ -6,7 +6,7 @@ public class TestLogEntity {
 	private String devices;
 	private String ip;
 	private int type;
-	private long time;
+	private String time;
 	private String log;
 	private int selected;
 
@@ -42,11 +42,11 @@ public class TestLogEntity {
 		this.type = type;
 	}
 
-	public long getTime() {
+	public String getTime() {
 		return time;
 	}
 
-	public void setTime(long time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 

@@ -3,6 +3,9 @@ package com.mh.myservice.db.dao;
 import com.mh.myservice.db.DataBase;
 import com.mh.myservice.entity.TestLogEntity;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,18 +24,19 @@ public class TestLogDao extends DataBase<TestLogEntity>{
 	}
 
 	public List<TestLogEntity> getGroup(String coloum) throws SQLException {
-		String sql = "SELECT id,devices,ip,time,type FROM `log` GROUP BY `{coloum}`;";
+		String sql = "SELECT devices FROM `log` GROUP BY `{coloum}`;";
 		sql = sql.replace("{coloum}", coloum);
         ResultSet result = getDB().executeQuery(sql);
         List<TestLogEntity> list = new ArrayList<>();
         while (result.next()){
-            TestLogEntity entity = getGroup(result);
+            TestLogEntity entity = new TestLogEntity();
+            entity.setDevices(result.getString("devices"));
             list.add(entity);
         }
         return list;
 	}
 
-    public List<TestLogEntity> listGroupData(String group, String val) throws SQLException {
+    public List<TestLogEntity> listGroupData(String group, String val) throws SQLException, UnsupportedEncodingException {
         String sql = "SELECT * FROM `log` WHERE `{group}`='{val}';";
         sql = sql.replace("{group}", group);
         sql = sql.replace("{val}", val);
@@ -45,25 +49,14 @@ public class TestLogDao extends DataBase<TestLogEntity>{
         return list;
     }
 
-    private TestLogEntity getGroup(ResultSet result) throws SQLException {
+    private TestLogEntity getTestLogEntity(ResultSet result) throws SQLException, UnsupportedEncodingException {
         TestLogEntity entity = new TestLogEntity();
         entity.setId(result.getInt("id"));
         entity.setType(result.getInt("type"));
         entity.setDevices(result.getString("devices"));
         entity.setIp(result.getString("ip"));
-        //entity.setLog(result.getString("log"));
-        entity.setTime(result.getLong("time"));
-        return entity;
-    }
-
-    private TestLogEntity getTestLogEntity(ResultSet result) throws SQLException {
-        TestLogEntity entity = new TestLogEntity();
-        entity.setId(result.getInt("id"));
-        entity.setType(result.getInt("type"));
-        entity.setDevices(result.getString("devices"));
-        entity.setIp(result.getString("ip"));
-        entity.setLog(result.getString("log"));
-        entity.setTime(result.getLong("time"));
+        entity.setLog(URLDecoder.decode(result.getString("log"), "UTF-8"));
+        entity.setTime(result.getString("time"));
         return entity;
     }
 
@@ -80,14 +73,14 @@ public class TestLogDao extends DataBase<TestLogEntity>{
 	}
 
 	@Override
-	public boolean add(TestLogEntity data) throws SQLException {
+	public boolean add(TestLogEntity data) throws SQLException, UnsupportedEncodingException {
 		String sql = "INSERT INTO log (`ip`, `devices`, `time`, `type`, `log`) VALUES ('{ip}', '{devices}', '{time}', '{type}', '{log}');";
 		sql = sql
 				.replace("{ip}", data.getIp())
 				.replace("{devices}", data.getDevices())
-				.replace("{time}", String.valueOf(data.getTime()))
+				.replace("{time}", data.getTime())
 				.replace("{type}", String.valueOf(data.getType()))
-				.replace("{log}", data.getLog());
+				.replace("{log}", URLEncoder.encode(data.getLog(), "UTF-8"));
 		boolean execute = getDB().execute(sql);
 		return execute;
 	}
