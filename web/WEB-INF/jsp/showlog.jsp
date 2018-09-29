@@ -21,25 +21,31 @@
         }
     </script>
     <style type="text/css">
-        table#content{
-            border-top: 1px solid #dddddd;
-            border-left: 1px solid #dddddd;
-        }
-        table#content tr td.delete{
-            border-bottom: 1px solid #dddddd;
+        body{
+            padding: 0px;
+            margin: 0px;
+            background-color: #666666;
         }
         table#content tr td.time{
-            border-bottom: 1px solid #dddddd;
+            /*border-bottom: 1px solid #dddddd;*/
+            background-color: beige;
         }
         table#content tr td.content{
-            border-bottom: 1px solid #dddddd;
-            border-right: 1px solid #dddddd;
+            /*border-bottom: 1px solid #dddddd;
+            border-right: 1px solid #dddddd;*/
+            background-color: cadetblue;
         }
-        table#content tr td p.normal{
+        table#content tr td p.normaltime{
             font-size: small; color: #666666;
         }
-        table#content tr td .error{
-            font-size: small; color: #ff0000;
+        table#content tr td p.errortime{
+            font-size: small; color: #ff3333;
+        }
+        table#content tr td p.normalcontent{
+            font-size: small; color: #eeeeee;
+        }
+        table#content tr td p.errorcontent{
+            font-size: small; color: #dc143c;
         }
     </style>
 </head>
@@ -67,7 +73,7 @@
     </table>
 </form>
 <form id="deletesubmit" action="test?app=showlog" method="post">
-    <table id="content" align="center" width="100%" cellspacing="0" cellpadding="1">
+    <table id="content" align="center" width="100%" cellspacing="0" cellpadding="2">
         <c:if test="${not empty devicesname}">
             <tr>
                 <td colspan="2" align="center" class="delete">
@@ -80,18 +86,18 @@
             <tr>
                 <td valign="top" class="time">
                     <c:if test="${log.type == 0}">
-                        <p class="normal">${log.time}:</p>
+                        <p class="normaltime">${log.time}:</p>
                     </c:if>
                     <c:if test="${log.type == 1}">
-                        <p class="error">${log.time}:</p>
+                        <p class="errortime">${log.time}:</p>
                     </c:if>
                 </td>
                 <td align="left" class="content">
                     <c:if test="${log.type == 0}">
-                        <p class="normal">${log.log}</p>
+                        <p class="normalcontent">${log.log}</p>
                     </c:if>
                     <c:if test="${log.type == 1}">
-                        <p class="error">${log.log}</p>
+                        <p class="errorcontent">${log.log}</p>
                     </c:if>
                 </td>
             </tr>
