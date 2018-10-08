@@ -24,11 +24,14 @@
         body{
             padding: 0px;
             margin: 0px;
-            background-color: #666666;
+            /*background-color: #666666;*/
+            background-color: beige;
         }
         table#content tr td.time{
             /*border-bottom: 1px solid #dddddd;*/
             background-color: beige;
+            min-width: 150px;
+            text-align: right;
         }
         table#content tr td.content{
             /*border-bottom: 1px solid #dddddd;
