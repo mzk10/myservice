@@ -34,8 +34,8 @@
             background-color: #333333;
         }
 
-        table#content{
-            max-width: 100%;
+        table{
+            word-break:break-all;
         }
 
         /*普通*/
@@ -58,6 +58,7 @@
         table#content tr td p.p_normalcontent {
             font-size: small;
             color: #eeeeee;
+            word-wrap: break-word;
         }
 
         /*错误*/

@@ -6,12 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db18eec7-294a-471d-bd2c-2ec3179cc78a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/DataBase.class" afterDir="false" />
+    <list default="true" id="db18eec7-294a-471d-bd2c-2ec3179cc78a" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/jsp/showlog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/jsp/showlog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/core/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/core/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/showlog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/showlog.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -140,15 +136,17 @@
           <entry key="html" value="303" />
           <entry key="java" value="3344" />
           <entry key="js" value="727" />
-          <entry key="jsp" value="2062" />
+          <entry key="jsp" value="2097" />
+          <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="303" />
           <entry key="JAVA" value="3343" />
-          <entry key="JSP" value="2062" />
+          <entry key="JSP" value="2097" />
           <entry key="JavaScript" value="727" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="SQL" value="1" />
         </counts>
       </usages-collector>
@@ -212,7 +210,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/showlog.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
+            <state relative-caret-position="391">
               <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
             </state>
           </provider>
@@ -970,12 +968,12 @@
       <workItem from="1538198382340" duration="9424000" />
       <workItem from="1538966015215" duration="1720000" />
       <workItem from="1538997841506" duration="4833000" />
-      <workItem from="1539248208141" duration="766000" />
+      <workItem from="1539248208141" duration="1450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80449000" />
+    <option name="totallyTimeSpent" value="81133000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -998,7 +996,7 @@
       <window_info id="Favorites" order="5" sideWeight="0.50179857" side_tool="true" weight="0.20042644" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32887402" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1920" height="1017" id="Run" order="2" visible="true" weight="0.29877368" />
+      <window_info active="true" anchor="bottom" x="0" y="23" width="1920" height="1017" id="Run" order="2" visible="true" weight="0.27313265" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30992195" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1024,6 +1022,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1294,7 +1296,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/showlog.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
+        <state relative-caret-position="391">
           <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
