@@ -34,6 +34,10 @@
             background-color: #333333;
         }
 
+        table#content{
+            max-width: 100%;
+        }
+
         /*普通*/
         table#content tr td.td_normaltime {
             background-color: beige;
