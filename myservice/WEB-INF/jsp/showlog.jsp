@@ -43,7 +43,7 @@
             background-color: beige;
             min-width: 150px;
             max-width: 160px;
-            text-align: right;
+            text-align: left;
         }
 
         table#content tr td.td_normalcontent {
@@ -66,7 +66,7 @@
             background-color: #333333;
             min-width: 150px;
             max-width: 160px;
-            text-align: right;
+            text-align: left;
         }
 
         table#content tr td.td_errorcontent {
@@ -115,7 +115,7 @@
     <table id="content" align="center" width="100%" cellspacing="0" cellpadding="2">
         <c:if test="${not empty devicesname}">
             <tr>
-                <td colspan="2" align="center" class="delete">
+                <td colspan="3" align="center" class="delete">
                     <input type="hidden" name="del_devices" value="${devicesname}"/>
                     <input onclick="isdelete();" type="button" value="删除该设备记录"/>
                 </td>
@@ -124,7 +124,7 @@
                 <tr>
                     <c:if test="${log.type == 0}">
                         <td valign="top" class="td_normaltime">
-                            <p class="p_normaltime">${log.time}:</p>
+                            <p class="p_normaltime" title="${log.id}">${log.time}:</p>
                         </td>
                         <td align="left" class="td_normalcontent">
                             <p class="p_normalcontent">${log.log}</p>
@@ -132,7 +132,7 @@
                     </c:if>
                     <c:if test="${log.type == 1}">
                         <td valign="top" class="td_errortime">
-                            <p class="p_errortime">${log.time}:</p>
+                            <p class="p_errortime" title="${log.id}">${log.time}:</p>
                         </td>
                         <td align="left" class="td_errorcontent">
                             <p class="p_errorcontent">${log.log}</p>

@@ -107,13 +107,13 @@ public class TestAction extends Action {
         goPage("/WEB-INF/jsp/showlog.jsp");
     }
 
-    public Object deletefile() throws SQLException, ServletException, IOException {
+    /*public Object deletefile() throws SQLException, ServletException, IOException {
         String devicesname = getParameter("del_devices");
         TestLogDao dao = new TestLogDao();
         dao.delete("devices", devicesname);
         dao.close();
         show();
         return null;
-    }
+    }*/
 
 }
