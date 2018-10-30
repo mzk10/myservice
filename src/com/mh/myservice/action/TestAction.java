@@ -17,9 +17,14 @@ public class TestAction extends Action {
     private static final String TOKEN = "weoiurwoieurtiowutoiuer";
 
     @Override
-    public Object deFault() throws IOException {
-        getResponse().sendRedirect("test.apk");
-        return null;
+    public Object deFault() throws SQLException, UnsupportedEncodingException {
+        TestLogDao dao = new TestLogDao();
+        TestLogEntity entity = new TestLogEntity();
+        String id1 = getParameter("id");
+        int id = Integer.parseInt(id1);
+        entity.setId(id);
+        entity = dao.selectData(entity);
+        return createResponseData(CODE_SUCCESS, entity);
     }
 
     public Object log() {
@@ -47,11 +52,11 @@ public class TestAction extends Action {
         try {
             dao.add(data);
             dao.close();
-            return createResponseData(200, null);
+            return createResponseData(CODE_SUCCESS);
         } catch (SQLException e) {
-            return createResponseData(203, null);
+            return createResponseData(CODE_DATABASE_ERROR);
         } catch (UnsupportedEncodingException e) {
-            return createResponseData(203, null);
+            return createResponseData(CODE_DATABASE_ERROR);
         }
     }
 
@@ -101,36 +106,6 @@ public class TestAction extends Action {
         getRequest().setAttribute("devices", devices);
         goPage("/WEB-INF/jsp/showlog.jsp");
     }
-
-    /*public Object getloglist() {
-        TestLogDao dao = new TestLogDao();
-        try {
-            List<TestLogEntity> devices = dao.getGroup("devices");
-            List<String> list = new ArrayList<>();
-            for (TestLogEntity entity : devices) {
-                list.add(entity.getDevices());
-            }
-            return createResponseData(200, list);
-        } catch (SQLException e) {
-            return createResponseData(203, null);
-        } finally {
-            dao.close();
-        }
-    }*/
-
-    /*public Object getlogfile() {
-        String name = getParameter("filename");
-        TestLogDao dao = new TestLogDao();
-        try {
-            List<TestLogEntity> devices = dao.listGroupData("devices", name);
-            return createResponseData(200, devices);
-        } catch (SQLException e) {
-            return createResponseData(203, "");
-        } finally {
-            dao.close();
-        }
-    }*/
-
 
     public Object deletefile() throws SQLException, ServletException, IOException {
         String devicesname = getParameter("del_devices");

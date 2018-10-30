@@ -2,6 +2,7 @@ package com.mh.myservice.db.dao;
 
 import com.mh.myservice.db.DataBase;
 import com.mh.myservice.entity.TestLogEntity;
+import com.sun.javafx.beans.annotations.NonNull;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -61,9 +62,14 @@ public class TestLogDao extends DataBase<TestLogEntity>{
     }
 
     @Override
-	public TestLogEntity selectData(TestLogEntity data) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+	public TestLogEntity selectData(@NonNull TestLogEntity data) throws SQLException, UnsupportedEncodingException {
+        int id = data.getId();
+        String sql = "SELECT * FROM `log` WHERE id={id};";
+        sql = sql.replace("{id}", String.valueOf(id));
+        ResultSet result = getDB().executeQuery(sql);
+        result.next();
+        TestLogEntity entity = getTestLogEntity(result);
+        return entity;
 	}
 
 	@Override

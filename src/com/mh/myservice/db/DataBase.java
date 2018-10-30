@@ -27,7 +27,7 @@ public abstract class DataBase<T> {
 	}
 	
 	public abstract List<T> listData() throws SQLException;
-	public abstract T selectData(T data) throws SQLException;
+	public abstract T selectData(T data) throws SQLException, UnsupportedEncodingException;
 	public abstract boolean add(T data) throws SQLException, UnsupportedEncodingException;
 	public abstract boolean delete(T data) throws SQLException;
 	public abstract boolean update(T data) throws SQLException;

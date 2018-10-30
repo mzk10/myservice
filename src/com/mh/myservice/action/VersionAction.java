@@ -25,9 +25,9 @@ public class VersionAction extends Action{
 		dao.close();
 		if(versionCheckEntity!=null)
 		{
-			return createResponseData(200, versionCheckEntity);
+			return createResponseData(CODE_SUCCESS, versionCheckEntity);
 		}else{
-			return createResponseData(404, null);
+			return createResponseData(CODE_404);
 		}
 	}
 

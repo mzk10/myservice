@@ -25,6 +25,15 @@ import java.util.List;
 public abstract class Action extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
+
+    protected static final int CODE_SUCCESS = 200; //成功
+    protected static final int CODE_EMPTY_USER = 201; //用户名和密码不可为空
+    protected static final int CODE_WRONG_USER = 202; //用户名或密码错误
+    protected static final int CODE_DATABASE_ERROR = 203; //数据库错误
+    protected static final int CODE_SESSION_ERROR = 204; //session错误
+    protected static final int CODE_404 = 404; //找不到页面
+    protected static final int CODE_UNKNOW = 100; //未知错误
+
     private HttpServletRequest request;
     private HttpServletResponse response;
 
@@ -240,6 +249,10 @@ public abstract class Action extends HttpServlet {
 //        }
 //        return macAddress;
 //    }
+
+    protected ResponseData createResponseData(int code) {
+        return ResponseData.create(code, null);
+    }
 
     protected ResponseData createResponseData(int code, Object data) {
         return ResponseData.create(code, data);

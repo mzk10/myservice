@@ -21,21 +21,21 @@ public class UploadAction extends Action {
     public Object uploadfile() throws IOException {
         try {
             List<FileInfoEntity> fileInfos = uploadFile("upfile", "test");
-            return createResponseData(200, fileInfos);
+            return createResponseData(CODE_SUCCESS, fileInfos);
         } catch (FileUploadException e) {
             e.printStackTrace();
         }
-        return createResponseData(204, null);
+        return createResponseData(CODE_SESSION_ERROR);
     }
 
     public Object testUploadfile() throws IOException {
         try {
             List<FileInfoEntity> fileInfos = uploadFile("upfile2", "test2");
-            return createResponseData(200, fileInfos);
+            return createResponseData(CODE_SUCCESS, fileInfos);
         } catch (FileUploadException e) {
             e.printStackTrace();
         }
-        return createResponseData(204, null);
+        return createResponseData(CODE_SESSION_ERROR);
     }
 
 }
