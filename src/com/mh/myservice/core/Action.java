@@ -155,7 +155,7 @@ public abstract class Action extends HttpServlet {
      * @return 文件属性
      */
     protected List<FileInfoEntity> uploadFile(String field, String dir) throws FileUploadException, IOException {
-        String realDir = getRequest().getServletContext().getRealPath(NameValues.getConfig(NameValues.DEFAULT_UPLOAD_PATH) + (dir == null ? "" : dir));
+        String realDir = getRequest().getServletContext().getRealPath(NameValues.getStringConfig(NameValues.DEFAULT_UPLOAD_PATH) + (dir == null ? "" : dir));
         File file = new File(realDir);
         if (!file.exists()) {
             boolean mkdir = file.mkdirs();

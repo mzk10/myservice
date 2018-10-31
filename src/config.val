@@ -1,3 +1,5 @@
 {
-"defaultUploadPath" : "upload/"
+"defaultUploadPath" : "upload/",
+"log" : false,
+"err" : true
 }

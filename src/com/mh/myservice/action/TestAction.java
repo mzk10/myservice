@@ -4,6 +4,7 @@ import com.mh.myservice.core.Action;
 import com.mh.myservice.db.dao.TestLogDao;
 import com.mh.myservice.entity.ResponseData;
 import com.mh.myservice.entity.TestLogEntity;
+import com.mh.myservice.util.NameValues;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
@@ -28,11 +29,19 @@ public class TestAction extends Action {
     }
 
     public Object log() {
-        return save(0);
+        boolean log = NameValues.getBooleanConfig("log");
+        if (log){
+            return save(0);
+        }
+        return createResponseData(CODE_SUCCESS);
     }
 
     public Object err() {
-        return save(1);
+        boolean log = NameValues.getBooleanConfig("err");
+        if (log){
+            return save(1);
+        }
+        return createResponseData(CODE_SUCCESS);
     }
 
     private ResponseData save(int type) {

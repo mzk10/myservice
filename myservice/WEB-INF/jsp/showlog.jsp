@@ -43,7 +43,7 @@
             background-color: beige;
             min-width: 150px;
             max-width: 160px;
-            text-align: left;
+            text-align: right;
         }
 
         table#content tr td.td_normalcontent {
@@ -66,7 +66,7 @@
             background-color: #333333;
             min-width: 150px;
             max-width: 160px;
-            text-align: left;
+            text-align: right;
         }
 
         table#content tr td.td_errorcontent {
