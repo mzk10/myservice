@@ -18,8 +18,8 @@ public abstract class DataBase<T> {
 
 	public DataBase(String dbname){
         try {
-//        	conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3579/" + dbname, "mzk10", "Wojiushi1");
-        	conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/" + dbname, "mzk10", "Wojiushi1");
+        	conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3579/" + dbname, "mzk10", "Wojiushi1");
+//        	conn = DriverManager.getConnection("jdbc:mysql://api.kanfamily.net:3579/" + dbname, "mzk10", "Wojiushi1");
 			sm = conn.createStatement();
 		} catch (SQLException e) {
 			e.printStackTrace();

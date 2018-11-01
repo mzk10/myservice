@@ -38,7 +38,7 @@ public class TestLogDao extends DataBase<TestLogEntity>{
 	}
 
     public List<TestLogEntity> listGroupData(String group, String val) throws SQLException, UnsupportedEncodingException {
-        String sql = "SELECT * FROM `log` WHERE `{group}`='{val}';";
+        String sql = "SELECT * FROM `log` WHERE `{group}`='{val}' ORDER BY `id` DESC ;";
         sql = sql.replace("{group}", group);
         sql = sql.replace("{val}", val);
         ResultSet result = getDB().executeQuery(sql);
@@ -64,7 +64,7 @@ public class TestLogDao extends DataBase<TestLogEntity>{
     @Override
 	public TestLogEntity selectData(@NonNull TestLogEntity data) throws SQLException, UnsupportedEncodingException {
         int id = data.getId();
-        String sql = "SELECT * FROM `log` WHERE id={id};";
+        String sql = "SELECT * FROM `log` WHERE id='{id}';";
         sql = sql.replace("{id}", String.valueOf(id));
         ResultSet result = getDB().executeQuery(sql);
         result.next();
@@ -80,13 +80,14 @@ public class TestLogDao extends DataBase<TestLogEntity>{
 
 	@Override
 	public boolean add(TestLogEntity data) throws SQLException, UnsupportedEncodingException {
-		String sql = "INSERT INTO log (`ip`, `devices`, `time`, `type`, `log`) VALUES ('{ip}', '{devices}', '{time}', '{type}', '{log}');";
+		String sql = "INSERT INTO log (`ip`, `devices`, `time`, `type`, `log`, `timestamp`) VALUES ('{ip}', '{devices}', '{time}', '{type}', '{log}', '{timestamp}');";
 		sql = sql
 				.replace("{ip}", data.getIp())
 				.replace("{devices}", data.getDevices())
 				.replace("{time}", data.getTime())
 				.replace("{type}", String.valueOf(data.getType()))
-				.replace("{log}", URLEncoder.encode(data.getLog(), "UTF-8"));
+				.replace("{log}", URLEncoder.encode(data.getLog(), "UTF-8"))
+				.replace("{timestamp}", String.valueOf(System.currentTimeMillis()));
 		boolean execute = getDB().execute(sql);
 		return execute;
 	}
