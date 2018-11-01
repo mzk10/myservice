@@ -8,7 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="db18eec7-294a-471d-bd2c-2ec3179cc78a" name="Default Changelist" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/TestLogDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/TestLogDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/db/dao/TestLogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/db/dao/TestLogDao.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -136,7 +138,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="309" />
-          <entry key="java" value="4533" />
+          <entry key="java" value="4573" />
           <entry key="js" value="839" />
           <entry key="jsp" value="2172" />
           <entry key="txt" value="6" />
@@ -146,7 +148,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="309" />
-          <entry key="JAVA" value="4532" />
+          <entry key="JAVA" value="4572" />
           <entry key="JSP" value="2172" />
           <entry key="JavaScript" value="839" />
           <entry key="PLAIN_TEXT" value="49" />
@@ -163,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+            <state relative-caret-position="1509">
+              <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,20 +174,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/TestLogDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+            <state relative-caret-position="418">
+              <caret line="95" column="67" lean-forward="true" selection-start-line="95" selection-start-column="67" selection-end-line="95" selection-end-column="67" />
+              <folding>
+                <element signature="e#456#457#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+            <state relative-caret-position="228">
+              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -221,6 +227,7 @@
       <find>devices</find>
       <find>+</find>
       <find>defaultUploadPath</find>
+      <find>dao.close</find>
     </findStrings>
     <replaceStrings>
       <replace>FileInfoEntity</replace>
@@ -272,13 +279,13 @@
         <option value="$PROJECT_DIR$/web/temp.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/showlog.jsp" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/util/NameValues.java" />
-        <option value="$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java" />
         <option value="$PROJECT_DIR$/src/config.val" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/Test.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/TestB.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/db/dao/TestLogDao.java" />
+        <option value="$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java" />
+        <option value="$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java" />
       </list>
     </option>
   </component>
@@ -787,7 +794,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Unnamed">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 7.0.63">
     <configuration name="Unnamed" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.mh.myservice.Main" />
       <module name="myservice" />
@@ -1003,12 +1010,12 @@
       <workItem from="1540886491078" duration="7317000" />
       <workItem from="1540950043569" duration="3513000" />
       <workItem from="1540976695662" duration="2277000" />
-      <workItem from="1541036879115" duration="513000" />
+      <workItem from="1541036879115" duration="1912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104461000" />
+    <option name="totallyTimeSpent" value="105860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1023,7 +1030,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4923077" visible="true" weight="0.22707888" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4923077" visible="true" weight="0.22707888" />
       <window_info id="Structure" order="1" sideWeight="0.50651467" side_tool="true" weight="0.20362474" />
       <window_info id="Web" order="2" sideWeight="0.50769234" side_tool="true" weight="0.20788912" />
       <window_info id="Designer" order="3" />
@@ -1031,8 +1038,8 @@
       <window_info id="Favorites" order="5" sideWeight="0.50179857" side_tool="true" weight="0.20042644" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32887402" />
-      <window_info anchor="bottom" x="0" y="23" width="1920" height="1017" id="Run" order="2" weight="0.37904125" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.30992195" />
+      <window_info anchor="bottom" x="0" y="23" width="1920" height="1017" id="Run" order="2" weight="0.31772575" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.21516165" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
@@ -1071,6 +1078,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1345,17 +1364,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="23" column="34" lean-forward="true" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="51" column="43" lean-forward="true" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+        <state relative-caret-position="1509">
+          <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1364,8 +1376,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/TestLogDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="66" column="57" selection-start-line="66" selection-start-column="57" selection-end-line="66" selection-end-column="57" />
+        <state relative-caret-position="418">
+          <caret line="95" column="67" lean-forward="true" selection-start-line="95" selection-start-column="67" selection-end-line="95" selection-end-column="67" />
+          <folding>
+            <element signature="e#456#457#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/DataBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>

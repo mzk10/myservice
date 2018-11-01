@@ -87,7 +87,7 @@ public class TestLogDao extends DataBase<TestLogEntity>{
 				.replace("{time}", data.getTime())
 				.replace("{type}", String.valueOf(data.getType()))
 				.replace("{log}", URLEncoder.encode(data.getLog(), "UTF-8"))
-				.replace("{timestamp}", String.valueOf(System.currentTimeMillis()));
+				.replace("{timestamp}", String.valueOf(System.currentTimeMillis()/1000));
 		boolean execute = getDB().execute(sql);
 		return execute;
 	}

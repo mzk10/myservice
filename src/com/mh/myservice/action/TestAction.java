@@ -18,19 +18,27 @@ public class TestAction extends Action {
     private static final String TOKEN = "weoiurwoieurtiowutoiuer";
 
     @Override
-    public Object deFault() throws SQLException, UnsupportedEncodingException {
+    public Object deFault() {
         TestLogDao dao = new TestLogDao();
         TestLogEntity entity = new TestLogEntity();
         String id1 = getParameter("id");
         int id = Integer.parseInt(id1);
         entity.setId(id);
-        entity = dao.selectData(entity);
+        try {
+            entity = dao.selectData(entity);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } finally {
+            dao.close();
+        }
         return createResponseData(CODE_SUCCESS, entity);
     }
 
     public Object log() {
         boolean log = NameValues.getBooleanConfig("log");
-        if (log){
+        if (log) {
             return save(0);
         }
         return createResponseData(CODE_SUCCESS);
@@ -38,7 +46,7 @@ public class TestAction extends Action {
 
     public Object err() {
         boolean log = NameValues.getBooleanConfig("err");
-        if (log){
+        if (log) {
             return save(1);
         }
         return createResponseData(CODE_SUCCESS);
@@ -60,12 +68,13 @@ public class TestAction extends Action {
         data.setLog(log);
         try {
             dao.add(data);
-            dao.close();
             return createResponseData(CODE_SUCCESS);
         } catch (SQLException e) {
             return createResponseData(CODE_DATABASE_ERROR);
         } catch (UnsupportedEncodingException e) {
             return createResponseData(CODE_DATABASE_ERROR);
+        } finally {
+            dao.close();
         }
     }
 
@@ -89,32 +98,45 @@ public class TestAction extends Action {
         return null;
     }
 
-    private void show() throws ServletException, IOException, SQLException {
+    private void show() {
         TestLogDao dao = new TestLogDao();
-        String del_devices = getParameter("del_devices");
-        if (del_devices!=null && !"".equals(del_devices)){
-            dao.delete("devices", del_devices);
-        }
-        List<TestLogEntity> devices = dao.getGroup("devices");
-        String devicesname = getParameter("devicesname");
-        List<TestLogEntity> loglist = null;
-        if (devicesname != null && !"".equals(devicesname)) {
-            for (TestLogEntity entity : devices) {
-                if (devicesname.equals(entity.getDevices())) {
-                    entity.setSelected(1);
-                }
+        try {
+            String del_devices = getParameter("del_devices");
+            if (del_devices != null && !"".equals(del_devices)) {
+                dao.delete("devices", del_devices);
             }
-            loglist = dao.listGroupData("devices", devicesname);
+            List<TestLogEntity> devices = dao.getGroup("devices");
+            String devicesname = getParameter("devicesname");
+            List<TestLogEntity> loglist = null;
+            if (devicesname != null && !"".equals(devicesname)) {
+                for (TestLogEntity entity : devices) {
+                    if (devicesname.equals(entity.getDevices())) {
+                        entity.setSelected(1);
+                    }
+                }
+                loglist = dao.listGroupData("devices", devicesname);
+            }
+            dao.close();
+            if (loglist == null) {
+                loglist = new ArrayList<>();
+            }
+            getRequest().setAttribute("devicesname", devicesname);
+            getRequest().setAttribute("logs", loglist);
+            getRequest().setAttribute("devices", devices);
+            goPage("/WEB-INF/jsp/showlog.jsp");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            dao.close();
         }
-        dao.close();
-        if (loglist == null) {
-            loglist = new ArrayList<>();
-        }
-        getRequest().setAttribute("devicesname", devicesname);
-        getRequest().setAttribute("logs", loglist);
-        getRequest().setAttribute("devices", devices);
-        goPage("/WEB-INF/jsp/showlog.jsp");
     }
+
 
     /*public Object deletefile() throws SQLException, ServletException, IOException {
         String devicesname = getParameter("del_devices");
