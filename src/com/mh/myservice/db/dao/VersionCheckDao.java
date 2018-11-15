@@ -1,61 +1,65 @@
 package com.mh.myservice.db.dao;
 
-import com.mh.myservice.db.DataBase;
-import com.mh.myservice.entity.VersionCheckEntity;
+import com.mh.myservice.db.BaseDao;
+import com.mh.myservice.entity.VersioncheckEntity;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class VersionCheckDao extends DataBase<VersionCheckEntity> {
-	
-	public VersionCheckDao() {
-		super("xiezuo");
-	}
+public class VersionCheckDao extends BaseDao<VersioncheckEntity> {
 
-	@Override
-	public List<VersionCheckEntity> listData() throws SQLException {
-		return null;
-	}
+    public VersionCheckDao() {
+        super("xiezuo");
+    }
 
-	@Override
-	public VersionCheckEntity selectData(VersionCheckEntity data) throws SQLException {
-		return null;
-	}
+    @Override
+    public List<VersioncheckEntity> listData() {
+        return null;
+    }
 
-	@Override
-	public boolean update(VersionCheckEntity data) throws SQLException {
-		return false;
-	}
+    @Override
+    public VersioncheckEntity selectData(VersioncheckEntity data) {
+        return null;
+    }
 
-	@Override
-	public boolean add(VersionCheckEntity data) throws SQLException {
-		return false;
-	}
+    @Override
+    public boolean update(VersioncheckEntity data) {
+        return false;
+    }
 
-	@Override
-	public boolean delete(VersionCheckEntity data) throws SQLException {
-		return false;
-	}
+    @Override
+    public int countData() {
+        return 0;
+    }
 
-	@Override
-	public int countData() throws SQLException {
-		return 1;
-	}
+    @Override
+    public boolean add(VersioncheckEntity data) {
+        return false;
+    }
 
-	public VersionCheckEntity getLastVersion() {
-		try {
-			ResultSet rs = getDB().executeQuery("SELECT * FROM versioncheck ORDER BY lastVersion DESC LIMIT 1;");
-			if (rs.next()) {
-				VersionCheckEntity entity = new VersionCheckEntity(rs.getInt("lastVersion"),
-						rs.getString("downloadUrl"), rs.getInt("length"), rs.getString("versionDetail"),
-						rs.getString("versionName"));
-				return entity;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
+    @Override
+    public boolean delete(VersioncheckEntity data) {
+        return false;
+    }
+
+
+    public VersioncheckEntity getLastVersion() {
+        try {
+            ResultSet rs = getDB().executeQuery("SELECT * FROM versioncheck ORDER BY lastVersion DESC LIMIT 1;");
+            if (rs.next()) {
+                VersioncheckEntity entity = new VersioncheckEntity(
+                        rs.getInt("lastVersion"),
+                        rs.getString("downloadUrl"),
+                        rs.getInt("length"),
+                        rs.getString("versionDetail"),
+                        rs.getString("versionName"));
+                return entity;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }

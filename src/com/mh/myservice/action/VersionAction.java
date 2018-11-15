@@ -3,7 +3,7 @@ package com.mh.myservice.action;
 
 import com.mh.myservice.core.Action;
 import com.mh.myservice.db.dao.VersionCheckDao;
-import com.mh.myservice.entity.VersionCheckEntity;
+import com.mh.myservice.entity.VersioncheckEntity;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class VersionAction extends Action{
 	public Object check() throws ServletException, IOException, SQLException
 	{
 		VersionCheckDao dao = new VersionCheckDao();
-		VersionCheckEntity versionCheckEntity = dao.getLastVersion();
+		VersioncheckEntity versionCheckEntity = dao.getLastVersion();
 		dao.close();
 		if(versionCheckEntity!=null)
 		{

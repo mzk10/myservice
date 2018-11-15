@@ -272,7 +272,7 @@ public abstract class Action extends HttpServlet {
 //	{
 //		String realPath = getRequest().getServletContext().getRealPath(path);
 //		File file = new File(realPath);
-//		String text = Util.loadTextOfFile(file);
+//		String text = FileUtil.loadTextOfFile(file);
 //		return text;
 //	}
 

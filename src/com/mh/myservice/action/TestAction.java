@@ -8,7 +8,6 @@ import com.mh.myservice.util.NameValues;
 
 import javax.servlet.ServletException;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,15 +23,8 @@ public class TestAction extends Action {
         String id1 = getParameter("id");
         int id = Integer.parseInt(id1);
         entity.setId(id);
-        try {
-            entity = dao.selectData(entity);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } finally {
-            dao.close();
-        }
+        entity = dao.selectData(entity);
+        dao.close();
         return createResponseData(CODE_SUCCESS, entity);
     }
 
@@ -69,9 +61,7 @@ public class TestAction extends Action {
         try {
             dao.add(data);
             return createResponseData(CODE_SUCCESS);
-        } catch (SQLException e) {
-            return createResponseData(CODE_DATABASE_ERROR);
-        } catch (UnsupportedEncodingException e) {
+        } catch (Exception e) {
             return createResponseData(CODE_DATABASE_ERROR);
         } finally {
             dao.close();
@@ -124,15 +114,9 @@ public class TestAction extends Action {
             getRequest().setAttribute("logs", loglist);
             getRequest().setAttribute("devices", devices);
             goPage("/WEB-INF/jsp/showlog.jsp");
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
+        } finally {
             dao.close();
         }
     }
