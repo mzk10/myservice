@@ -1,30 +1,30 @@
 package com.mh.myservice.db.dao;
 
 import com.mh.myservice.db.BaseDao;
-import com.mh.myservice.entity.VersioncheckEntity;
+import com.mh.myservice.entity.VersionCheckEntity;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-public class VersionCheckDao extends BaseDao<VersioncheckEntity> {
+public class VersionCheckDao extends BaseDao<VersionCheckEntity> {
 
     public VersionCheckDao() {
         super("xiezuo");
     }
 
     @Override
-    public List<VersioncheckEntity> listData() {
+    public List<VersionCheckEntity> listData() {
         return null;
     }
 
     @Override
-    public VersioncheckEntity selectData(VersioncheckEntity data) {
+    public VersionCheckEntity selectData(VersionCheckEntity data) {
         return null;
     }
 
     @Override
-    public boolean update(VersioncheckEntity data) {
+    public boolean update(VersionCheckEntity data) {
         return false;
     }
 
@@ -34,21 +34,21 @@ public class VersionCheckDao extends BaseDao<VersioncheckEntity> {
     }
 
     @Override
-    public boolean add(VersioncheckEntity data) {
+    public boolean add(VersionCheckEntity data) {
         return false;
     }
 
     @Override
-    public boolean delete(VersioncheckEntity data) {
+    public boolean delete(VersionCheckEntity data) {
         return false;
     }
 
 
-    public VersioncheckEntity getLastVersion() {
+    public VersionCheckEntity getLastVersion() {
         try {
             ResultSet rs = getDB().executeQuery("SELECT * FROM versioncheck ORDER BY lastVersion DESC LIMIT 1;");
             if (rs.next()) {
-                VersioncheckEntity entity = new VersioncheckEntity(
+                VersionCheckEntity entity = new VersionCheckEntity(
                         rs.getInt("lastVersion"),
                         rs.getString("downloadUrl"),
                         rs.getInt("length"),
