@@ -2,6 +2,7 @@ package com.mh.myservice.action;
 
 import com.mh.myservice.core.Action;
 import com.mh.myservice.db.dao.UserDao;
+import com.mh.myservice.entity.ResponseData;
 import com.mh.myservice.entity.UserEntity;
 import com.mh.myservice.util.StringUtil;
 
@@ -16,21 +17,33 @@ public class UserAction extends Action {
         return null;
     }
 
-    public Object login() {
+    public ResponseData login() {
         String username = getParameter("username");
         String password = getParameter("password");
-        UserDao dao = null;
+        UserDao dao = new UserDao();
         UserEntity entity = new UserEntity(username, password);
-        dao = new UserDao();
         UserEntity checkuser = dao.selectData(entity);
         if (checkuser != null) {
             String token = StringUtil.md5(username + password + System.currentTimeMillis());
-            return createResponseData(200, checkuser);
-        }
-        if (dao != null) {
+            checkuser.setToken(token);
+            dao.update(checkuser);
             dao.close();
+            return createResponseData(200, checkuser);
+        }else {
+            dao.close();
+            return createResponseData(202);
         }
-        return createResponseData(202);
+    }
+
+    public ResponseData tokenlogin(){
+        String token = getParameter("token");
+        UserDao dao = new UserDao();
+        UserEntity entity = dao.selectData(token);
+        if (entity!=null){
+            return createResponseData(200, entity);
+        }else {
+            return createResponseData(210);
+        }
     }
 
 }

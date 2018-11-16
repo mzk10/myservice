@@ -21,11 +21,10 @@ public class UserDao extends BaseDao<UserEntity> {
     @Override
     public UserEntity selectData(UserEntity data) {
         try {
-            String sql = "SELECT * FROM user where `username`='{username}' & `password`='{password}'";
+            String sql = "SELECT * FROM user where `username`='{username}' AND `password`='{password}'";
             sql = sql.replace("{username}", data.getUsername());
             sql = sql.replace("{password}", data.getPassword());
-            ResultSet rs = null;
-            rs = getDB().executeQuery(sql);
+            ResultSet rs = getDB().executeQuery(sql);
             if (rs.next()) {
                 int id = rs.getInt("id");
                 String username = rs.getString("username");
@@ -35,7 +34,25 @@ public class UserDao extends BaseDao<UserEntity> {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
+    }
 
+    public UserEntity selectData(String token) {
+        try {
+            String sql = "SELECT * FROM user where `token`='{token}'";
+            sql = sql.replace("{token}", token);
+            ResultSet rs = getDB().executeQuery(sql);
+            if (rs.next()) {
+                return new UserEntity(
+                        rs.getInt("id"),
+                        rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("token")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -43,15 +60,13 @@ public class UserDao extends BaseDao<UserEntity> {
         try {
             String sql = "SELECT * FROM user where `username`='{username}'";
             sql = sql.replace("{username}", username);
-            ResultSet rs = null;
-            rs = getDB().executeQuery(sql);
+            ResultSet rs = getDB().executeQuery(sql);
             if (rs.next()) {
                 return true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return false;
     }
 
@@ -78,6 +93,22 @@ public class UserDao extends BaseDao<UserEntity> {
 
     @Override
     public boolean update(UserEntity data) {
+        if (data != null) {
+            try {
+                String sql = "UPDATE user SET " +
+                        "token='{token}' " +
+//                        "username='{username}', " +
+//                        "password='{password}', " +
+                        "WHERE id={id}";
+//                sql = sql.replace("{username}", data.getUsername());
+//                sql = sql.replace("{password}", data.getPassword());
+                sql = sql.replace("{token}", data.getToken());
+                sql = sql.replace("{id}", String.valueOf(data.getId()));
+                return getDB().execute(sql);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
         return false;
     }
 
