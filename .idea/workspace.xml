@@ -73,9 +73,7 @@
       <change beforePath="$PROJECT_DIR$/myservice/img/404.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myservice/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myservice/js/jquery-1.7.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/action/VersionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/action/VersionAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/db/dao/VersionCheckDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/db/dao/VersionCheckDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/entity/VersionCheckEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/entity/VersionCheckEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app/app-release-5.apk" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/app-release-5.apk" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -292,16 +290,16 @@
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/BaseDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="472">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/VersionCheckDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
+            <state relative-caret-position="73">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#395#396#0" expanded="true" />
                 <element signature="e#422#423#0" expanded="true" />
@@ -318,7 +316,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/VersionCheckEntity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
@@ -1208,12 +1206,12 @@
       <workItem from="1541036879115" duration="1912000" />
       <workItem from="1542196137663" duration="1822000" />
       <workItem from="1542247821428" duration="6488000" />
-      <workItem from="1542336103666" duration="6602000" />
+      <workItem from="1542336103666" duration="7135000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122976000" />
+    <option name="totallyTimeSpent" value="123509000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1226,9 +1224,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75250834" visible="true" weight="0.22121535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75250834" visible="true" weight="0.22121535" />
       <window_info id="Structure" order="1" sideWeight="0.50651467" side_tool="true" weight="0.20362474" />
       <window_info id="Web" order="2" sideWeight="0.50769234" side_tool="true" weight="0.20788912" />
       <window_info id="Designer" order="3" />
@@ -1246,7 +1243,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32887402" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32998884" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.24526198" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.24526198" />
       <window_info anchor="bottom" id="Application Servers" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.20178372" />
@@ -1606,7 +1603,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VersioncheckEntity.class">
+    <entry file="file://$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VersionCheckEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
@@ -1616,26 +1613,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/VersionCheckDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-          <folding>
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-          </folding>
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
@@ -1668,6 +1646,25 @@
             <element signature="e#1079#1080#0" expanded="true" />
             <element signature="e#1133#1134#0" expanded="true" />
             <element signature="e#1179#1180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/VersionCheckDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#395#396#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
           </folding>
         </state>
       </provider>
