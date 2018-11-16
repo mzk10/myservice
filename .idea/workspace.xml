@@ -7,25 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db18eec7-294a-471d-bd2c-2ec3179cc78a" name="Default Changelist" comment="update">
+      <change afterPath="$PROJECT_DIR$/web/app/app-release-5.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/code.val" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/code.val" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/TestAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/TestAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/UserAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/VersionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/VersionAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/DataBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/FontDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/FontDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/IgonewordDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/IgonewordDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/RootuserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/RootuserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/TestLogDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/TestLogDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/VersionCheckDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/VersionCheckDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VersionCheckEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VersionCheckEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code.val" beforeDir="false" afterPath="$PROJECT_DIR$/src/code.val" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/db/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/db/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/entity/UserEntity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,13 +46,6 @@
         <item name="kanfamily" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="xiezuo: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="kanfamily" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xiezuo: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="igoneword: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -161,35 +137,36 @@
         <counts>
           <entry key="class" value="3" />
           <entry key="html" value="20" />
-          <entry key="igoneword" value="1" />
-          <entry key="java" value="133" />
+          <entry key="igoneword" value="2" />
+          <entry key="java" value="134" />
           <entry key="js" value="21" />
           <entry key="jsp" value="8" />
-          <entry key="sql" value="7" />
+          <entry key="sql" value="8" />
           <entry key="ts" value="1" />
           <entry key="txt" value="3" />
           <entry key="user" value="14" />
           <entry key="val" value="4" />
+          <entry key="versioncheck" value="2" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="Database Element" value="15" />
+          <entry key="Database Element" value="18" />
           <entry key="HTML" value="20" />
-          <entry key="JAVA" value="133" />
+          <entry key="JAVA" value="134" />
           <entry key="JSP" value="8" />
           <entry key="JavaScript" value="21" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Scratch" value="7" />
+          <entry key="Scratch" value="8" />
           <entry key="TypeScript" value="1" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="11" />
+          <entry key="cell" value="13" />
           <entry key="dummy" value="4" />
           <entry key="html" value="309" />
           <entry key="java" value="5995" />
@@ -208,7 +185,7 @@
           <entry key="JavaScript" value="839" />
           <entry key="PLAIN_TEXT" value="67" />
           <entry key="SQL" value="9" />
-          <entry key="Scratch" value="131" />
+          <entry key="Scratch" value="133" />
         </counts>
       </usages-collector>
     </session>
@@ -222,7 +199,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,11 +207,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+            <state relative-caret-position="605">
+              <caret line="111" column="21" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2226#2227#0" expanded="true" />
@@ -245,10 +222,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/BaseDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/schema/xiezuo/table/versioncheck">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/UserEntity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="244">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
               <folding>
                 <element signature="e#911#912#0" expanded="true" />
                 <element signature="e#939#940#0" expanded="true" />
@@ -748,37 +743,54 @@
             <path>
               <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="action" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="img" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="font" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="img" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="WEB-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -817,20 +829,20 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\work\code\myservice\web" />
-      <recent name="C:\work\code\myservice" />
-      <recent name="C:\work\code\myservice\web\WEB-INF\lib" />
-      <recent name="C:\work\code\myservice\src\com\mh\myservice\util" />
-      <recent name="C:\work\code\myservice\myservice\log" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.mh.myservice.entity" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\work\code\myservice\web" />
       <recent name="C:\work\code\myservice\web\WEB-INF" />
       <recent name="C:\Users\wanggza\IdeaProjects\myservice\myservice" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.mh.myservice.entity" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\work\code\myservice\web\app" />
+      <recent name="C:\work\code\myservice\web" />
+      <recent name="C:\work\code\myservice" />
+      <recent name="C:\work\code\myservice\web\WEB-INF\lib" />
+      <recent name="C:\work\code\myservice\src\com\mh\myservice\util" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1064,12 +1076,12 @@
       <workItem from="1541036879115" duration="1912000" />
       <workItem from="1542196137663" duration="1822000" />
       <workItem from="1542247821428" duration="6488000" />
-      <workItem from="1542336103666" duration="3601000" />
+      <workItem from="1542336103666" duration="5040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119975000" />
+    <option name="totallyTimeSpent" value="121414000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1084,7 +1096,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.75250834" visible="true" weight="0.22121535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75250834" visible="true" weight="0.22121535" />
       <window_info id="Structure" order="1" sideWeight="0.50651467" side_tool="true" weight="0.20362474" />
       <window_info id="Web" order="2" sideWeight="0.50769234" side_tool="true" weight="0.20788912" />
       <window_info id="Designer" order="3" />
@@ -1094,7 +1106,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.17391305" />
       <window_info anchor="bottom" x="0" y="23" width="1920" height="1017" id="Run" order="2" weight="0.4057971" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.29208472" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.29208472" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998884" />
@@ -1109,7 +1121,7 @@
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.23827292" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.23827292" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
@@ -1140,13 +1152,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/html/regedit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/html/checklog.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -1325,13 +1330,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/schema/xiezuo/table/igoneword">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/IgonewordDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -1356,17 +1354,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/BaseDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
-          <folding>
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1462,7 +1449,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/UserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="e#911#912#0" expanded="true" />
             <element signature="e#939#940#0" expanded="true" />
@@ -1475,7 +1462,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1489,6 +1476,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="111" column="21" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
+            <element signature="e#2254#2255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="31" column="40" lean-forward="true" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/schema/xiezuo/table/igoneword">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -1496,15 +1509,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-          </folding>
+    <entry file="das://4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/schema/xiezuo/table/versioncheck">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
