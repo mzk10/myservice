@@ -7,6 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db18eec7-294a-471d-bd2c-2ec3179cc78a" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4037c399-7ad3-4f1a-8dd9-4b1e06727f4d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4037c399-7ad3-4f1a-8dd9-4b1e06727f4d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myservice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/myservice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/code.val" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/RootuserAction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/SettingAction.class" beforeDir="false" />
@@ -73,7 +78,11 @@
       <change beforePath="$PROJECT_DIR$/myservice/img/404.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myservice/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/myservice/js/jquery-1.7.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/app/app-release-5.apk" beforeDir="false" afterPath="$PROJECT_DIR$/web/app/app-release-5.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/db/dao/IgonewordDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/entity/IgonewordEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/entity/Log.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/entity/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/entity/ResponseData.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,13 +120,6 @@
         <item name="kanfamily" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="xiezuo: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="kanfamily" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="xiezuo: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -183,8 +185,8 @@
     <session id="-2125956273">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="26" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="5" />
           <entry key="project.open.time.12" value="4" />
@@ -194,8 +196,8 @@
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="3" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.open.time.9" value="4" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -203,10 +205,13 @@
           <entry key="class" value="5" />
           <entry key="html" value="20" />
           <entry key="igoneword" value="2" />
-          <entry key="java" value="137" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="156" />
           <entry key="js" value="21" />
           <entry key="jsp" value="8" />
-          <entry key="sql" value="9" />
+          <entry key="log" value="2" />
+          <entry key="rootuser" value="1" />
+          <entry key="sql" value="11" />
           <entry key="ts" value="1" />
           <entry key="txt" value="3" />
           <entry key="user" value="14" />
@@ -218,13 +223,14 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="Database Element" value="18" />
+          <entry key="Database Element" value="21" />
           <entry key="HTML" value="20" />
-          <entry key="JAVA" value="137" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="156" />
           <entry key="JSP" value="8" />
           <entry key="JavaScript" value="21" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Scratch" value="9" />
+          <entry key="Scratch" value="11" />
           <entry key="TypeScript" value="1" />
           <entry key="XML" value="1" />
         </counts>
@@ -237,7 +243,7 @@
           <entry key="java" value="6003" />
           <entry key="js" value="839" />
           <entry key="jsp" value="2172" />
-          <entry key="sql" value="125" />
+          <entry key="sql" value="289" />
           <entry key="txt" value="12" />
           <entry key="val" value="51" />
         </counts>
@@ -250,7 +256,7 @@
           <entry key="JavaScript" value="839" />
           <entry key="PLAIN_TEXT" value="67" />
           <entry key="SQL" value="9" />
-          <entry key="Scratch" value="139" />
+          <entry key="Scratch" value="303" />
         </counts>
       </usages-collector>
     </session>
@@ -260,108 +266,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="111" column="21" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2226#2227#0" expanded="true" />
-                <element signature="e#2254#2255#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/BaseDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/VersionCheckDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="e#395#396#0" expanded="true" />
-                <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#505#506#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#672#673#0" expanded="true" />
-                <element signature="e#696#697#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/VersionCheckEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="122" selection-start-line="10" selection-start-column="122" selection-end-line="10" selection-end-column="122" />
-              <folding>
-                <element signature="e#263#264#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
-                <element signature="e#418#419#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
-                <element signature="e#746#747#0" expanded="true" />
-                <element signature="e#787#788#0" expanded="true" />
-                <element signature="e#823#824#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#1007#1008#0" expanded="true" />
-                <element signature="e#1045#1046#0" expanded="true" />
-                <element signature="e#1079#1080#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1179#1180#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/UserEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#911#912#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1015#1016#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="437">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -467,10 +376,10 @@
         <option value="$PROJECT_DIR$/src/com/mh/myservice/entity/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/code.val" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/console.sql" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/db/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/entity/VersioncheckEntity.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/entity/VersionCheckEntity.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/console.sql" />
       </list>
     </option>
   </component>
@@ -829,6 +738,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="myservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="myservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="myservice" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -852,92 +777,6 @@
               <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mh" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="myservice" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entity" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="font" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="img" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="myservice" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="myservice" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="web" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="WEB-INF" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="myservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myservice" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -953,7 +792,7 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
@@ -1207,11 +1046,13 @@
       <workItem from="1542196137663" duration="1822000" />
       <workItem from="1542247821428" duration="6488000" />
       <workItem from="1542336103666" duration="7135000" />
+      <workItem from="1542952852799" duration="15000" />
+      <workItem from="1542952983500" duration="2532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123509000" />
+    <option name="totallyTimeSpent" value="126121000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1224,16 +1065,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75250834" visible="true" weight="0.22121535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7502787" visible="true" weight="0.24626866" />
       <window_info id="Structure" order="1" sideWeight="0.50651467" side_tool="true" weight="0.20362474" />
       <window_info id="Web" order="2" sideWeight="0.50769234" side_tool="true" weight="0.20788912" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" sideWeight="0.50179857" side_tool="true" weight="0.20042644" />
-      <window_info id="Persistence" order="6" sideWeight="0.24721603" side_tool="true" weight="0.24253732" />
+      <window_info active="true" id="Persistence" order="6" sideWeight="0.24972129" side_tool="true" weight="0.24626866" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.17391305" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.17391305" />
       <window_info anchor="bottom" x="0" y="23" width="1920" height="1017" id="Run" order="2" weight="0.4057971" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29208472" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1243,14 +1085,14 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32887402" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32998884" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.24526198" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.18283166" />
       <window_info anchor="bottom" id="Application Servers" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.20178372" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.29208472" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.32995737" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.23827292" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.15618336" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="5" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
@@ -1281,44 +1123,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/html/upload.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/html/showlog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/showlog.js" />
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/js/showlog.js" />
-    <entry file="jar://$PROJECT_DIR$/../../tools/jdk/java7/jre/lib/ext/mysql-connector-java-5.1.35-bin.jar!/com/mysql/jdbc/StatementImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/temp.js" />
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/util/Encrypter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1102">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/util/AuthCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/temp2.html" />
     <entry file="file://$PROJECT_DIR$/temp.js" />
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/SettingAction.java">
@@ -1417,51 +1221,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/ResponseData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/TestLogEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/Rootuser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/IgonewordEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/IgonewordDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#426#427#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1152#1153#0" expanded="true" />
-            <element signature="e#1176#1177#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1487,18 +1250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#748#749#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1506,10 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding>
-            <element signature="e#1626#1627#0" expanded="true" />
-            <element signature="e#1654#1655#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1523,16 +1270,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/util/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/code.val">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -1540,26 +1277,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#911#912#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1574,11 +1295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
           <caret line="111" column="21" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1596,13 +1312,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VersionCheckEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -1617,55 +1326,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/VersionCheckEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="122" selection-start-line="10" selection-start-column="122" selection-end-line="10" selection-end-column="122" />
-          <folding>
-            <element signature="e#263#264#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#553#554#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-            <element signature="e#746#747#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#823#824#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1007#1008#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1179#1180#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/VersionCheckDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/schema/xiezuo/table/rootuser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/schema/xiezuo/table/log">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4037c399-7ad3-4f1a-8dd9-4b1e06727f4d/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/IgonewordEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myservice.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/FontEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/FileInfoEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/ResponseData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/TestLogEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/dao/IgonewordDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
           <folding>
-            <element signature="e#395#396#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/util/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/util/Encrypter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/entity/VersionCheckEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -1724,7 +1506,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>JPA|myservice</last-edited>
+          <last-edited>Web|myservice</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1748,7 +1530,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>commons-codec-1.4</last-edited>
+          <last-edited>Java EE 6-Java EE 6</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

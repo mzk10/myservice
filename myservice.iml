@@ -11,15 +11,6 @@
         </webroots>
       </configuration>
     </facet>
-    <facet type="jpa" name="JPA">
-      <configuration>
-        <setting name="validation-enabled" value="true" />
-        <setting name="provider-name" value="OpenJPA" />
-        <datasource-mapping>
-          <factory-entry name="Entities" value="4037c399-7ad3-4f1a-8dd9-4b1e06727f4d" />
-        </datasource-mapping>
-      </configuration>
-    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <content url="file://$MODULE_DIR$">

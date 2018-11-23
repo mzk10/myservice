@@ -5,7 +5,7 @@
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://47.92.154.240:3579/xiezuo</jdbc-url>
+      <jdbc-url>jdbc:mysql://api.kanfamily.net:3579/xiezuo</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

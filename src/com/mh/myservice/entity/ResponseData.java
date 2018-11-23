@@ -3,7 +3,7 @@ package com.mh.myservice.entity;
 import com.mh.myservice.util.NameValues;
 
 
-public class ResponseData extends BaseEntity{
+public class ResponseData {
 
 	private ResponseData(){}
 	
