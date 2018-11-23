@@ -1,23 +1,20 @@
 package com.mh.myservice.db.dao;
 
-import com.mh.myservice.db.BaseDao;
 import com.mh.myservice.entity.FontEntity;
+import com.mh.myservice.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.query.Query;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
-public class FontDao extends BaseDao<FontEntity> {
+public class FontDao {
 
-    public FontDao() {
-        super("xiezuo");
-    }
-
-    @Override
     public List<FontEntity> listData() {
+        Session session = HibernateUtil.openSession();
         try {
-            ResultSet rs = getDB().executeQuery("SELECT * FROM font;");
+            Query<FontEntity> query = session.createQuery("FROM FontEntity ", FontEntity.class);
+            return query.list();
+            /*ResultSet rs = getDB().executeQuery("SELECT * FROM font;");
             List<FontEntity> list = new ArrayList<>();
             while (rs.next()) {
                 FontEntity font = new FontEntity();
@@ -26,36 +23,17 @@ public class FontDao extends BaseDao<FontEntity> {
                 font.setPath(rs.getString("path"));
                 list.add(font);
             }
-            return list;
-        } catch (SQLException e) {
+            return list;*/
+        } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            session.close();
         }
         return null;
     }
 
-    @Override
-    public FontEntity selectData(FontEntity data) {
-        return null;
-    }
+    public void close(){
 
-    @Override
-    public boolean update(FontEntity data) {
-        return false;
-    }
-
-    @Override
-    public boolean add(FontEntity data) {
-        return false;
-    }
-
-    @Override
-    public boolean delete(FontEntity data) {
-        return false;
-    }
-
-    @Override
-    public int countData() {
-        return 0;
     }
 
 }

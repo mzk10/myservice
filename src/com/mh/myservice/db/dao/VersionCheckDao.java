@@ -1,65 +1,30 @@
 package com.mh.myservice.db.dao;
 
-import com.mh.myservice.db.BaseDao;
 import com.mh.myservice.entity.VersionCheckEntity;
+import com.mh.myservice.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.query.Query;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
-public class VersionCheckDao extends BaseDao<VersionCheckEntity> {
-
-    public VersionCheckDao() {
-        super("xiezuo");
-    }
-
-    @Override
-    public List<VersionCheckEntity> listData() {
-        return null;
-    }
-
-    @Override
-    public VersionCheckEntity selectData(VersionCheckEntity data) {
-        return null;
-    }
-
-    @Override
-    public boolean update(VersionCheckEntity data) {
-        return false;
-    }
-
-    @Override
-    public int countData() {
-        return 0;
-    }
-
-    @Override
-    public boolean add(VersionCheckEntity data) {
-        return false;
-    }
-
-    @Override
-    public boolean delete(VersionCheckEntity data) {
-        return false;
-    }
+public class VersionCheckDao {
 
 
     public VersionCheckEntity getLastVersion() {
+        Session session = HibernateUtil.openSession();
         try {
-            ResultSet rs = getDB().executeQuery("SELECT * FROM versioncheck ORDER BY lastVersion DESC LIMIT 1;");
-            if (rs.next()) {
-                VersionCheckEntity entity = new VersionCheckEntity(
-                        rs.getInt("lastVersion"),
-                        rs.getString("downloadUrl"),
-                        rs.getInt("length"),
-                        rs.getString("versionDetail"),
-                        rs.getString("versionName"));
-                return entity;
-            }
-        } catch (SQLException e) {
+            Query<VersionCheckEntity> query = session.createQuery("FROM VersionCheckEntity ORDER BY lastVersion DESC ", VersionCheckEntity.class);
+            query.setMaxResults(1);
+            List<VersionCheckEntity> list = query.list();
+            return list.get(0);
+        } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            session.close();
         }
         return null;
     }
 
+    public void close() {
+    }
 }

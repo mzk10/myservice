@@ -1,7 +1,11 @@
 package com.mh.myservice.entity;
 
-public class UserEntity {
+import javax.persistence.*;
+import java.util.Objects;
 
+@Entity
+@Table(name = "user", schema = "xiezuo", catalog = "")
+public class UserEntity {
     private int id;
     private String username;
     private String password;
@@ -12,19 +16,8 @@ public class UserEntity {
         this.password = password;
     }
 
-    public UserEntity(int id, String username, String password) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-    }
-
-    public UserEntity(int id, String username, String password, String token) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.token = token;
-    }
-
+    @Id
+    @Column(name = "id", nullable = false)
     public int getId() {
         return id;
     }
@@ -33,6 +26,8 @@ public class UserEntity {
         this.id = id;
     }
 
+    @Basic
+    @Column(name = "username", nullable = false, length = 50)
     public String getUsername() {
         return username;
     }
@@ -41,6 +36,8 @@ public class UserEntity {
         this.username = username;
     }
 
+    @Basic
+    @Column(name = "password", nullable = false, length = 50)
     public String getPassword() {
         return password;
     }
@@ -49,11 +46,29 @@ public class UserEntity {
         this.password = password;
     }
 
+    @Basic
+    @Column(name = "token", nullable = false, length = 50)
     public String getToken() {
         return token;
     }
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        UserEntity entity = (UserEntity) o;
+        return id == entity.id &&
+                Objects.equals(username, entity.username) &&
+                Objects.equals(password, entity.password) &&
+                Objects.equals(token, entity.token);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, token);
     }
 }

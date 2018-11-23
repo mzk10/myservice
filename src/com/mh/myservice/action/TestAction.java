@@ -1,9 +1,9 @@
 package com.mh.myservice.action;
 
 import com.mh.myservice.core.Action;
-import com.mh.myservice.db.dao.TestLogDao;
+import com.mh.myservice.db.dao.LogDao;
 import com.mh.myservice.entity.ResponseData;
-import com.mh.myservice.entity.TestLogEntity;
+import com.mh.myservice.entity.LogEntity;
 import com.mh.myservice.util.NameValues;
 
 import javax.servlet.ServletException;
@@ -18,8 +18,8 @@ public class TestAction extends Action {
 
     @Override
     public Object deFault() {
-        TestLogDao dao = new TestLogDao();
-        TestLogEntity entity = new TestLogEntity();
+        LogDao dao = new LogDao();
+        LogEntity entity = new LogEntity();
         String id1 = getParameter("id");
         int id = Integer.parseInt(id1);
         entity.setId(id);
@@ -51,8 +51,8 @@ public class TestAction extends Action {
         log = log.replaceAll("\r\n", "</br>")
                 .replaceAll("\n", "</br>");
         String ip = getRequest().getRemoteAddr();
-        TestLogDao dao = new TestLogDao();
-        TestLogEntity data = new TestLogEntity();
+        LogDao dao = new LogDao();
+        LogEntity data = new LogEntity();
         data.setTime(time);
         data.setDevices(devices);
         data.setIp(ip);
@@ -89,17 +89,17 @@ public class TestAction extends Action {
     }
 
     private void show() {
-        TestLogDao dao = new TestLogDao();
+        LogDao dao = new LogDao();
         try {
             String del_devices = getParameter("del_devices");
             if (del_devices != null && !"".equals(del_devices)) {
                 dao.delete("devices", del_devices);
             }
-            List<TestLogEntity> devices = dao.getGroup("devices");
+            List<LogEntity> devices = dao.getGroup("devices");
             String devicesname = getParameter("devicesname");
-            List<TestLogEntity> loglist = null;
+            List<LogEntity> loglist = null;
             if (devicesname != null && !"".equals(devicesname)) {
-                for (TestLogEntity entity : devices) {
+                for (LogEntity entity : devices) {
                     if (devicesname.equals(entity.getDevices())) {
                         entity.setSelected(1);
                     }
@@ -124,7 +124,7 @@ public class TestAction extends Action {
 
     /*public Object deletefile() throws SQLException, ServletException, IOException {
         String devicesname = getParameter("del_devices");
-        TestLogDao dao = new TestLogDao();
+        LogDao dao = new LogDao();
         dao.delete("devices", devicesname);
         dao.close();
         show();
