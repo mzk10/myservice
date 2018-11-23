@@ -16,6 +16,9 @@ public class UserEntity {
         this.password = password;
     }
 
+    public UserEntity() {
+    }
+
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {
