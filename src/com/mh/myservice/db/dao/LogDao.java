@@ -84,7 +84,7 @@ public class LogDao {
             String sql = "DELETE LogEntity WHERE :key=:val";
             sql = sql.replace(":key", key);
             sql = sql.replace(":val", val);
-            Query<LogEntity> query = session.createQuery(sql, LogEntity.class);
+            Query query = session.createQuery(sql);
             query.executeUpdate();
             return true;
         } catch (Exception e) {
