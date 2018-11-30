@@ -1,15 +1,15 @@
 package com.mh.myservice.db.dao;
 
+import com.mh.myservice.db.BaseDao;
 import com.mh.myservice.entity.LogEntity;
 import com.mh.myservice.util.HibernateUtil;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.net.URLDecoder;
 import java.util.List;
 
-public class LogDao {
+public class LogDao extends BaseDao<LogEntity> {
 
 
     public List<LogEntity> getGroup(String coloum) {
@@ -66,7 +66,7 @@ public class LogDao {
         return null;
     }
 
-    public boolean add(LogEntity data) {
+    /*public boolean add(LogEntity data) {
         Session session = HibernateUtil.openSession();
         try {
             session.save(data);
@@ -97,10 +97,6 @@ public class LogDao {
             session.close();
         }
         return false;
-    }
-
-    public void close() {
-
-    }
+    }*/
 
 }

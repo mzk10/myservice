@@ -27,7 +27,6 @@ public class SettingAction extends Action{
 	{
 		FontDao dao = new FontDao();
 		List<FontEntity> listData = dao.listData();
-		dao.close();
 		return ResponseData.create(CODE_SUCCESS, listData);
 	}
 	

@@ -24,7 +24,6 @@ public class TestAction extends Action {
         int id = Integer.parseInt(id1);
         entity.setId(id);
         entity = dao.selectData(entity);
-        dao.close();
         return createResponseData(CODE_SUCCESS, entity);
     }
 
@@ -63,8 +62,6 @@ public class TestAction extends Action {
             return createResponseData(CODE_SUCCESS);
         } catch (Exception e) {
             return createResponseData(CODE_DATABASE_ERROR);
-        } finally {
-            dao.close();
         }
     }
 
@@ -106,7 +103,6 @@ public class TestAction extends Action {
                 }
                 loglist = dao.listGroupData("devices", devicesname);
             }
-            dao.close();
             if (loglist == null) {
                 loglist = new ArrayList<>();
             }
@@ -116,8 +112,6 @@ public class TestAction extends Action {
             goPage("/WEB-INF/jsp/showlog.jsp");
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            dao.close();
         }
     }
 

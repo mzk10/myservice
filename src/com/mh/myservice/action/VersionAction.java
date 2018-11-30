@@ -22,7 +22,6 @@ public class VersionAction extends Action{
 	{
 		VersionCheckDao dao = new VersionCheckDao();
 		VersionCheckEntity versionCheckEntity = dao.getLastVersion();
-		dao.close();
 		if(versionCheckEntity!=null)
 		{
 			return createResponseData(CODE_SUCCESS, versionCheckEntity);

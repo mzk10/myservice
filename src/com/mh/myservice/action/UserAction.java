@@ -27,10 +27,8 @@ public class UserAction extends Action {
             String token = StringUtil.md5(username + password + System.currentTimeMillis());
             checkuser.setToken(token);
             dao.update(checkuser);
-            dao.close();
             return createResponseData(200, checkuser);
         }else {
-            dao.close();
             return createResponseData(202);
         }
     }

@@ -1,5 +1,6 @@
 package com.mh.myservice.db.dao;
 
+import com.mh.myservice.db.BaseDao;
 import com.mh.myservice.entity.UserEntity;
 import com.mh.myservice.util.HibernateUtil;
 import org.hibernate.Session;
@@ -7,7 +8,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class UserDao{
+public class UserDao extends BaseDao<UserEntity> {
 
 
     public UserEntity selectData(UserEntity data) {
@@ -59,7 +60,7 @@ public class UserDao{
         return false;
     }
 
-    public boolean add(UserEntity data) {
+    /*public boolean add(UserEntity data) {
         Session session = HibernateUtil.openSession();
         try {
             session.save(data);
@@ -70,9 +71,9 @@ public class UserDao{
             session.close();
         }
         return false;
-    }
+    }*/
 
-    public boolean update(UserEntity data) {
+    /*public boolean update(UserEntity data) {
         Session session = HibernateUtil.openSession();
         try {
             session.update(data);
@@ -83,8 +84,5 @@ public class UserDao{
             session.close();
         }
         return false;
-    }
-
-    public void close() {
-    }
+    }*/
 }

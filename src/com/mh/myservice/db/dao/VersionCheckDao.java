@@ -25,6 +25,4 @@ public class VersionCheckDao {
         return null;
     }
 
-    public void close() {
-    }
 }

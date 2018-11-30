@@ -32,8 +32,4 @@ public class FontDao {
         return null;
     }
 
-    public void close(){
-
-    }
-
 }

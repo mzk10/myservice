@@ -1,5 +1,6 @@
 package com.mh.myservice.db.dao;
 
+import com.mh.myservice.db.BaseDao;
 import com.mh.myservice.entity.Rootuser;
 import com.mh.myservice.util.HibernateUtil;
 import org.hibernate.Session;
@@ -7,7 +8,7 @@ import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class RootuserDao{
+public class RootuserDao extends BaseDao<Rootuser> {
 
     public Rootuser selectData(Rootuser data) {
         Session session = HibernateUtil.openSession();
@@ -25,7 +26,7 @@ public class RootuserDao{
         return null;
     }
 
-    public boolean add(Rootuser data) {
+    /*public boolean add(Rootuser data) {
         Session session = HibernateUtil.openSession();
         try {
             session.save(data);
@@ -36,6 +37,6 @@ public class RootuserDao{
             session.close();
         }
         return false;
-    }
+    }*/
 
 }
