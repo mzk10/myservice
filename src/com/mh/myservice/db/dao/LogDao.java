@@ -66,37 +66,4 @@ public class LogDao extends BaseDao<LogEntity> {
         return null;
     }
 
-    /*public boolean add(LogEntity data) {
-        Session session = HibernateUtil.openSession();
-        try {
-            session.save(data);
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-        return false;
-    }
-
-    public boolean delete(String key, String val) {
-        Session session = HibernateUtil.openSession();
-        Transaction ts = session.beginTransaction();
-        try {
-            String sql = "DELETE LogEntity WHERE :key=':val'";
-            sql = sql.replace(":key", key);
-            sql = sql.replace(":val", val);
-            Query query = session.createQuery(sql);
-            query.executeUpdate();
-            ts.commit();
-            return true;
-        } catch (Exception e) {
-            ts.rollback();
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-        return false;
-    }*/
-
 }

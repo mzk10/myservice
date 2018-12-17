@@ -20,10 +20,13 @@ public class BaseDao<T> {
 
     public boolean add(T data) {
         Session session = HibernateUtil.openSession();
+        Transaction transaction = session.beginTransaction();
         try {
             session.save(data);
+            transaction.commit();
             return true;
         } catch (Exception e) {
+            transaction.rollback();
             e.printStackTrace();
         } finally {
             session.close();
@@ -40,7 +43,6 @@ public class BaseDao<T> {
             sql = sql.replace(":coloum", coloum);
             sql = sql.replace(":val", val);
             Query query = session.createQuery(sql);
-            query.executeUpdate();
             ts.commit();
             return true;
         } catch (Exception e) {
@@ -54,10 +56,13 @@ public class BaseDao<T> {
 
     public boolean update(T data) {
         Session session = HibernateUtil.openSession();
+        Transaction transaction = session.beginTransaction();
         try {
             session.update(data);
+            transaction.commit();
             return true;
         } catch (Exception e) {
+            transaction.rollback();
             e.printStackTrace();
         } finally {
             session.close();

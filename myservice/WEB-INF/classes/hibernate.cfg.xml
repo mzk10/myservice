@@ -13,6 +13,8 @@
     <mapping class="com.mh.myservice.entity.VersionCheckEntity"/>
     <mapping class="com.mh.myservice.entity.UserEntity"/>
     <mapping class="com.mh.myservice.entity.Rootuser"/>
+    <mapping class="com.mh.myservice.entity.BookEntity"/>
+    <mapping class="com.mh.myservice.entity.VolEntity"/>
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->
