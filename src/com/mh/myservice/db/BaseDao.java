@@ -18,11 +18,11 @@ public class BaseDao<T> {
         entityClass = (Class) params[0];
     }
 
-    public String add(T data) {
+    public Object add(T data) {
         Session session = HibernateUtil.openSession();
         Transaction transaction = session.beginTransaction();
         try {
-            String id = (String) session.save(data);
+            Object id = session.save(data);
             transaction.commit();
             return id;
         } catch (Exception e) {
@@ -31,7 +31,7 @@ public class BaseDao<T> {
         } finally {
             session.close();
         }
-        return "";
+        return null;
     }
 
     public boolean delete(String coloum, String val) {

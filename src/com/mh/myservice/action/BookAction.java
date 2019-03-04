@@ -45,7 +45,7 @@ public class BookAction extends Action {
                 if (checkBookName) {
                     return ResponseData.create(600);
                 }
-                String bookid = dao.add(entity);
+                String bookid = (String) dao.add(entity);
                 entity.setId(bookid);
                 return ResponseData.create(200, entity);
             }else {
