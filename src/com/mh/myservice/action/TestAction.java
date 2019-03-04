@@ -2,13 +2,16 @@ package com.mh.myservice.action;
 
 import com.mh.myservice.core.Action;
 import com.mh.myservice.db.dao.LogDao;
-import com.mh.myservice.entity.ResponseData;
 import com.mh.myservice.entity.LogEntity;
-import com.mh.myservice.util.NameValues;
+import com.mh.myservice.entity.ResponseData;
+import com.mh.myservice.util.AuthCode;
+import com.mh.myservice.util.ConfigUtil;
+import com.mh.myservice.util.StringUtil;
 
+import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,26 +30,37 @@ public class TestAction extends Action {
         return createResponseData(CODE_SUCCESS, entity);
     }
 
-    public Object log() {
-        boolean log = NameValues.getBooleanConfig("log");
-        if (log) {
-            return save(0);
+    /**
+     * 提交普通日志
+     *
+     * @return
+     */
+    public Object log(String devices, String log, String time
+    ) {
+        boolean isSaveLog = ConfigUtil.getBooleanConfig("isSaveLog");
+        if (isSaveLog) {
+            return save(0, devices, log, time);
         }
         return createResponseData(CODE_SUCCESS);
     }
 
-    public Object err() {
-        boolean log = NameValues.getBooleanConfig("err");
-        if (log) {
-            return save(1);
+    /**
+     * 提交错误日志
+     *
+     * @return
+     */
+    public Object err(String devices, String log, String time) {
+        boolean isSaveErr = ConfigUtil.getBooleanConfig("isSaveErr");
+        if (isSaveErr) {
+            return save(1, devices, log, time);
         }
         return createResponseData(CODE_SUCCESS);
     }
 
-    private ResponseData save(int type) {
-        String devices = getParameter("devices");
+    private ResponseData save(int type, String devices, String log, String time) {
+        /*String devices = getParameter("devices");
         String log = getParameter("log");
-        String time = getParameter("time");
+        String time = getParameter("time");*/
         log = log.replaceAll("\r\n", "</br>")
                 .replaceAll("\n", "</br>");
         String ip = getRequest().getRemoteAddr();
@@ -65,18 +79,26 @@ public class TestAction extends Action {
         }
     }
 
-    public Object showlog() throws ServletException, IOException, SQLException {
+    /**
+     * 显示日志页面
+     *
+     * @param password
+     * @return
+     * @throws ServletException
+     * @throws IOException
+     */
+    public Object showlog(String password, String del_devices, String devicesname) throws ServletException, IOException {
         String token = (String) getRequest().getSession().getAttribute("token");
         if (TOKEN.equals(token)) {
-            show();
+            show(del_devices, devicesname);
         } else {
-            String password = getParameter("password");
-            if (password == null || "".equals(password)) {
+            //String password = getParameter("password");
+            if (StringUtil.isEmpty(password)) {
                 goPage("/WEB-INF/html/checklog.html");
             } else {
                 if ("9527".equals(password)) {
                     getRequest().getSession().setAttribute("token", TOKEN);
-                    show();
+                    show(del_devices, devicesname);
                 } else {
                     goPage("/WEB-INF/html/checklog.html");
                 }
@@ -85,17 +107,17 @@ public class TestAction extends Action {
         return null;
     }
 
-    private void show() {
+    private void show(String del_devices, String devicesname) {
         LogDao dao = new LogDao();
         try {
-            String del_devices = getParameter("del_devices");
-            if (del_devices != null && !"".equals(del_devices)) {
+            //String del_devices = getParameter("del_devices");
+            if (!StringUtil.isEmpty(del_devices)) {
                 dao.delete("devices", del_devices);
             }
             List<LogEntity> devices = dao.getGroup("devices");
-            String devicesname = getParameter("devicesname");
+            //String devicesname = getParameter("devicesname");
             List<LogEntity> loglist = null;
-            if (devicesname != null && !"".equals(devicesname)) {
+            if (!StringUtil.isEmpty(devicesname)) {
                 for (LogEntity entity : devices) {
                     if (devicesname.equals(entity.getDevices())) {
                         entity.setSelected(1);
@@ -113,6 +135,19 @@ public class TestAction extends Action {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 验证码测试
+     *
+     * @return
+     */
+    public Object getAuthImg() throws IOException {
+        String authCode = AuthCode.getAuthCode();
+        BufferedImage authImg = AuthCode.getAuthImg(authCode);
+        getResponse().addHeader("content-type", "image/png");
+        ImageIO.write(authImg, "PNG", getResponse().getOutputStream());
+        return null;
     }
 
 

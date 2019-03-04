@@ -1,6 +1,6 @@
 package com.mh.myservice.entity;
 
-import com.mh.myservice.util.NameValues;
+import com.mh.myservice.util.ConfigUtil;
 
 
 public class ResponseData {
@@ -14,7 +14,7 @@ public class ResponseData {
 	public static ResponseData create(int code,Object data){
 		ResponseData result = new ResponseData();
 		result.code = code;
-		result.info = NameValues.getCodeInfo(code);
+		result.info = ConfigUtil.getCodeInfo(code);
 		result.data = data;
 		return result;
 	}

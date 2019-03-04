@@ -1,13 +1,40 @@
 package com.mh.myservice.util;
 
 import java.io.File;
+import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
+import java.lang.reflect.Type;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(isChineseChar('ａ'));//ｂｃ
-        String quanjiao = "@%（）０１２３４５６７８９ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．（）＠＃＄％＾＆";
+
+        try {
+            Class<?> clazz = Class.forName("com.mh.myservice.TestClass");
+            Method[] methods = clazz.getMethods();
+            for (Method meth : methods) {
+                String methName = meth.getName();
+                if ("check".equals(methName)) {
+                    System.out.println(methName);
+                    //Type[] genericParameterTypes = meth.getGenericParameterTypes();
+                    Parameter[] parameters = meth.getParameters();
+                    for (Parameter param : parameters) {
+                        String paramName = param.getName();
+                        Type parameterizedType = param.getParameterizedType();
+                        String typeName = parameterizedType.getTypeName();
+                        System.out.println(typeName + ":" + paramName);
+                    }
+                }
+            }
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
+
+//        System.out.println(isChineseChar('ａ'));//ｂｃ
+//        String quanjiao = "@%（）０１２３４５６７８９ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ，．（）＠＃＄％＾＆";
+
 
     private static void setPathText(String path) {
         int length = getStringLength(path);

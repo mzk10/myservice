@@ -4,7 +4,8 @@ import com.google.gson.Gson;
 import com.mh.myservice.db.dao.UserDao;
 import com.mh.myservice.entity.FileInfoEntity;
 import com.mh.myservice.entity.ResponseData;
-import com.mh.myservice.util.NameValues;
+import com.mh.myservice.util.ConfigUtil;
+import com.mh.myservice.util.StringUtil;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -18,9 +19,10 @@ import javax.servlet.http.HttpSession;
 import java.io.*;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 //import java.io.*;
 
@@ -56,63 +58,72 @@ public abstract class Action extends HttpServlet {
     @Override
     protected final void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        //++++++1秒延迟++++++
+        /*//++++++1秒延迟++++++
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        //++++++1秒延迟++++++
+        //++++++1秒延迟++++++*/
         this.request = req;
         this.response = resp;
         String app = req.getParameter("app");
         resp.setHeader("Content-Type", "text/html;charset=utf-8");
-		/*{
-			StringBuffer sb = new StringBuffer();
-			String addr = req.getRemoteAddr();
-			Date date = new Date();
-			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd,HH:mm:ss");
-			String time_format = format.format(date);
-			sb.append("\n时间：\t");
-			sb.append(time_format);
-			sb.append("\n地址：\t");
-			sb.append(addr);
-			sb.append("\n接口：\t");
-			sb.append(req.getRequestURL().toString());
-			if (app!=null && !"".equals(app)){
-				sb.append("?app="+app);
-			}
-			System.out.println(sb.toString());
-		}*/
+        showServerLog(req, app);
         PrintWriter w = null;
-        if (app == null || "".equals(app)) {
-            Object result = null;
-            try {
-                result = deFault();
-            } catch (SQLException e) {
-                e.printStackTrace();
+        Object result = null;
+        try {
+            //app参数为空，请求默认接口
+            if (app == null || "".equals(app)) {
+                try {
+                    result = deFault();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                //app参数不为空，请求相应接口
+                Method[] methods = this.getClass().getMethods();
+                Method method = null;
+                for (Method m : methods) {
+                    String name = m.getName();
+                    if (name != null && name.equals(app)) {
+                        method = m;
+                        break;
+                    }
+                }
+                //找到相应接口
+                if (method != null) {
+                    //获取接口参数
+                    Parameter[] parameters = method.getParameters();
+                    int paramLength = parameters.length;
+                    //如果接口有参数
+                    if (paramLength > 0) {
+                        Object[] paramArray = new Object[paramLength];
+                        for (int i = 0; i < paramLength; i++) {
+                            Parameter param = parameters[i];
+                            String paramName = param.getName();
+                            String parameter = getParameter(paramName);
+                            if (StringUtil.isEmpty(parameter)) {
+                                parameter = "";
+                            }
+                            paramArray[i] = parameter;
+                        }
+                        result = method.invoke(this, paramArray);
+                    } else {
+                        result = method.invoke(this);
+                    }
+                } else {
+                    //找不到接口，报404
+                    w = resp.getWriter();
+                    w.print(ResponseData.create(404));
+                    return;
+                }
             }
-            if (result != null && !"".equals(result)) {
+            if (result != null) {
                 Gson gson = new Gson();
                 String json = gson.toJson(result);
                 w = resp.getWriter();
                 w.print(json);
-            }
-            return;
-        }
-        try {
-            Method method = this.getClass().getMethod(app);
-            Object result = method.invoke(this);
-            if (result != null) {
-                if (result instanceof String) {
-                    w = resp.getWriter();
-                    w.print(result);
-                } else {
-                    Gson gson = new Gson();
-                    String json = gson.toJson(result);
-                    w = resp.getWriter();
-                    w.print(json);
-                }
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -123,6 +134,47 @@ public abstract class Action extends HttpServlet {
         }
     }
 
+    private void showServerLog(HttpServletRequest req, String app) {
+        if (!ConfigUtil.getBooleanConfig("isServerLog")){
+            return;
+        }
+        StringBuilder sb = new StringBuilder();
+        String addr = req.getRemoteAddr();
+        Date date = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd,HH:mm:ss");
+        String time_format = format.format(date);
+        sb
+                .append("[")
+                .append(time_format)
+                .append("]")
+                .append(":")
+                .append(addr)
+                .append("==>")
+                .append(req.getRequestURL().toString());
+        if (app != null && !"".equals(app)) {
+            sb
+                    .append("?app=")
+                    .append(app);
+        }
+        Enumeration<String> parameterNames = req.getParameterNames();
+        Map<String, String> parameterMap = new HashMap<>();
+        while (parameterNames.hasMoreElements()) {
+            String key = parameterNames.nextElement();
+            if (!"app".equals(key)) {
+                parameterMap.put(key, req.getParameter(key));
+            }
+        }
+
+        if (parameterMap.size() > 0) {
+            Gson gson = new Gson();
+            String p = gson.toJson(parameterMap);
+            sb
+                    .append("&data=")
+                    .append(p);
+        }
+        System.out.println(sb.toString());
+    }
+
     protected String getParameter(String name) {
         return request.getParameter(name);
     }
@@ -131,12 +183,12 @@ public abstract class Action extends HttpServlet {
 //		return this.response.getWriter();
 //	}
 
-//	public void write(String data) throws IOException{
-//		PrintWriter w = this.response.getWriter();
-//		w.print(data);
-//		w.flush();
-//		w.close();
-//	}
+    public void write(String data) throws IOException {
+        PrintWriter w = this.response.getWriter();
+        w.print(data);
+        w.flush();
+        w.close();
+    }
 
 //	public void sendRedirect(String str){
 //		try {
@@ -156,7 +208,7 @@ public abstract class Action extends HttpServlet {
 
     public abstract Object deFault() throws ServletException, IOException, SQLException;
 
-    protected boolean checkUser() {
+    protected boolean checkToken() {
         String userid = getParameter("userid");
         String token = getParameter("token");
         UserDao dao = new UserDao();
@@ -259,7 +311,7 @@ public abstract class Action extends HttpServlet {
      * @return 文件属性
      */
     protected List<FileInfoEntity> uploadFile(String field, String dir) throws FileUploadException, IOException {
-        String realDir = getRequest().getServletContext().getRealPath(NameValues.getStringConfig(NameValues.DEFAULT_UPLOAD_PATH) + (dir == null ? "" : dir));
+        String realDir = getRequest().getServletContext().getRealPath(ConfigUtil.getStringConfig(ConfigUtil.DEFAULT_UPLOAD_PATH) + (dir == null ? "" : dir));
         File file = new File(realDir);
         if (!file.exists()) {
             boolean mkdir = file.mkdirs();

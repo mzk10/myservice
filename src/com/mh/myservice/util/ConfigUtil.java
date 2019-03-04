@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class NameValues {
+public class ConfigUtil {
 	
 	public static String getCodeInfo(int code){
 		return getValue(code, "/code.val");
@@ -43,7 +43,7 @@ public class NameValues {
 	}
 	private static String getValue(String key, String file){
 		try {
-			NameValues nameValues = new NameValues();
+			ConfigUtil nameValues = new ConfigUtil();
 			InputStream is = nameValues.getClass().getResourceAsStream(file);
 			InputStreamReader isr = new InputStreamReader(is,"UTF-8");
 			BufferedReader br = new BufferedReader(isr);
