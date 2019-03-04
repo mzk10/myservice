@@ -6,7 +6,11 @@ import com.mh.myservice.util.NameValues;
 public class ResponseData {
 
 	private ResponseData(){}
-	
+
+	public static ResponseData create(int code){
+		return create(code, null);
+	}
+
 	public static ResponseData create(int code,Object data){
 		ResponseData result = new ResponseData();
 		result.code = code;

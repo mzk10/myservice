@@ -1,6 +1,7 @@
 package com.mh.myservice.core;
 
 import com.google.gson.Gson;
+import com.mh.myservice.db.dao.UserDao;
 import com.mh.myservice.entity.FileInfoEntity;
 import com.mh.myservice.entity.ResponseData;
 import com.mh.myservice.util.NameValues;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.*;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -54,6 +56,13 @@ public abstract class Action extends HttpServlet {
     @Override
     protected final void doPost(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        //++++++1秒延迟++++++
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        //++++++1秒延迟++++++
         this.request = req;
         this.response = resp;
         String app = req.getParameter("app");
@@ -146,6 +155,101 @@ public abstract class Action extends HttpServlet {
     }
 
     public abstract Object deFault() throws ServletException, IOException, SQLException;
+
+    protected boolean checkUser() {
+        String userid = getParameter("userid");
+        String token = getParameter("token");
+        UserDao dao = new UserDao();
+        return dao.checkUser(userid, token);
+    }
+
+    protected <T> T getEntityParameter(Class<T> entityClass) {
+        Field[] declaredFields = entityClass.getDeclaredFields();
+        T instance = null;
+        try {
+            instance = entityClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        for (Field field : declaredFields) {
+            Class<?> type = field.getType();
+            String typeName = type.getName();
+            String fName = field.getName();
+            //System.out.println(typeName + ":" + fName);
+            String param = getParameter(fName);
+            if (param == null) {
+                continue;
+            }
+            field.setAccessible(true);
+            if ("int".equals(typeName)) {
+                try {
+                    field.setInt(instance, Integer.parseInt(param));
+                } catch (Exception e) {
+                }
+            } else if ("long".equals(typeName)) {
+                try {
+                    field.setLong(instance, Long.parseLong(param));
+                } catch (Exception e) {
+                }
+            } else if ("boolean".equals(typeName)) {
+                try {
+                    field.setBoolean(instance, Boolean.parseBoolean("true"));
+                } catch (Exception e) {
+                }
+            } else if ("float".equals(typeName)) {
+                try {
+                    field.setFloat(instance, Float.parseFloat(param));
+                } catch (Exception e) {
+                }
+            } else if ("double".equals(typeName)) {
+                try {
+                    field.setDouble(instance, Double.parseDouble(param));
+                } catch (Exception e) {
+                }
+            } else if ("char".equals(typeName)) {
+                try {
+                    field.setChar(instance, param.charAt(0));
+                } catch (Exception e) {
+                }
+            } else if ("java.lang.Integer".equals(typeName)) {
+                try {
+                    field.set(instance, new Integer(param));
+                } catch (Exception e) {
+                }
+            } else if ("java.lang.Long".equals(typeName)) {
+                try {
+                    field.set(instance, new Long(param));
+                } catch (Exception e) {
+                }
+            } else if ("java.lang.Boolean".equals(typeName)) {
+                try {
+                    field.set(instance, new Boolean(param));
+                } catch (Exception e) {
+                }
+            } else if ("java.lang.Float".equals(typeName)) {
+                try {
+                    field.set(instance, new Float(param));
+                } catch (Exception e) {
+                }
+            } else if ("java.lang.Double".equals(typeName)) {
+                try {
+                    field.set(instance, new Double(param));
+                } catch (Exception e) {
+                }
+            } else if ("java.lang.Character".equals(typeName)) {
+                try {
+                    field.set(instance, param.charAt(0));
+                } catch (Exception e) {
+                }
+            } else if ("java.lang.String".equals(typeName)) {
+                try {
+                    field.set(instance, param);
+                } catch (Exception e) {
+                }
+            }
+        }
+        return instance;
+    }
 
     /**
      * 接收上传的文件

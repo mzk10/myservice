@@ -60,6 +60,27 @@ public class UserDao extends BaseDao<UserEntity> {
         return false;
     }
 
+    public boolean checkUser(String userid, String token) {
+        Session session = HibernateUtil.openSession();
+        try {
+            String sql = "FROM UserEntity WHERE id=:id";
+            sql = sql.replace(":id", userid);
+            Query<UserEntity> query = session.createQuery(sql, UserEntity.class);
+            List<UserEntity> list = query.list();
+            if (list.size()>0){
+                UserEntity entity = list.get(0);
+                if (token!=null && token.equals(entity.getToken())){
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+        return false;
+    }
+
     /*public boolean add(UserEntity data) {
         Session session = HibernateUtil.openSession();
         try {

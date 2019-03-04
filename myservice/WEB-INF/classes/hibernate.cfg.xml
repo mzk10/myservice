@@ -14,7 +14,9 @@
     <mapping class="com.mh.myservice.entity.UserEntity"/>
     <mapping class="com.mh.myservice.entity.Rootuser"/>
     <mapping class="com.mh.myservice.entity.BookEntity"/>
+    <mapping resource="com/mh/myservice/entity/BookEntity.hbm.xml"/>
     <mapping class="com.mh.myservice.entity.VolEntity"/>
+    <mapping resource="com/mh/myservice/entity/VolEntity.hbm.xml"/>
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hbm2ddl.auto">update</property> -->

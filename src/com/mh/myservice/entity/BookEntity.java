@@ -6,8 +6,8 @@ import java.util.Objects;
 @Entity
 @Table(name = "book", schema = "xiezuo", catalog = "")
 public class BookEntity {
-    private int id;
-    private int userId;
+    private String id;
+    private int userid;
     private String bookName;
     private int bookCount;
     private String lastTime;
@@ -16,27 +16,27 @@ public class BookEntity {
     private String cover;
 
     @Id
-    @Column(name = "id", nullable = false)
-    public int getId() {
+    @Column(name = "id")
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     @Basic
-    @Column(name = "user_id", nullable = false)
-    public int getUserId() {
-        return userId;
+    @Column(name = "userid")
+    public int getUserid() {
+        return userid;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     @Basic
-    @Column(name = "bookName", nullable = false, length = 50)
+    @Column(name = "bookName")
     public String getBookName() {
         return bookName;
     }
@@ -46,7 +46,7 @@ public class BookEntity {
     }
 
     @Basic
-    @Column(name = "bookCount", nullable = false)
+    @Column(name = "bookCount")
     public int getBookCount() {
         return bookCount;
     }
@@ -56,7 +56,7 @@ public class BookEntity {
     }
 
     @Basic
-    @Column(name = "lastTime", nullable = true, length = 20)
+    @Column(name = "lastTime")
     public String getLastTime() {
         return lastTime;
     }
@@ -66,7 +66,7 @@ public class BookEntity {
     }
 
     @Basic
-    @Column(name = "createTime", nullable = true, length = 20)
+    @Column(name = "createTime")
     public String getCreateTime() {
         return createTime;
     }
@@ -76,7 +76,7 @@ public class BookEntity {
     }
 
     @Basic
-    @Column(name = "detail", nullable = true, length = 500)
+    @Column(name = "detail")
     public String getDetail() {
         return detail;
     }
@@ -86,7 +86,7 @@ public class BookEntity {
     }
 
     @Basic
-    @Column(name = "cover", nullable = true, length = 200)
+    @Column(name = "cover")
     public String getCover() {
         return cover;
     }
@@ -99,19 +99,19 @@ public class BookEntity {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        BookEntity that = (BookEntity) o;
-        return id == that.id &&
-                userId == that.userId &&
-                bookCount == that.bookCount &&
-                Objects.equals(bookName, that.bookName) &&
-                Objects.equals(lastTime, that.lastTime) &&
-                Objects.equals(createTime, that.createTime) &&
-                Objects.equals(detail, that.detail) &&
-                Objects.equals(cover, that.cover);
+        BookEntity entity = (BookEntity) o;
+        return userid == entity.userid &&
+                bookCount == entity.bookCount &&
+                Objects.equals(id, entity.id) &&
+                Objects.equals(bookName, entity.bookName) &&
+                Objects.equals(lastTime, entity.lastTime) &&
+                Objects.equals(createTime, entity.createTime) &&
+                Objects.equals(detail, entity.detail) &&
+                Objects.equals(cover, entity.cover);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userId, bookName, bookCount, lastTime, createTime, detail, cover);
+        return Objects.hash(id, userid, bookName, bookCount, lastTime, createTime, detail, cover);
     }
 }

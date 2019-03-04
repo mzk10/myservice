@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.mh.myservice.entity.BookEntity" table="book" schema="xiezuo">
+        <id name="id" column="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="userid" column="userid"/>
+        <property name="bookName" column="bookName"/>
+        <property name="bookCount" column="bookCount"/>
+        <property name="lastTime" column="lastTime"/>
+        <property name="createTime" column="createTime"/>
+        <property name="detail" column="detail"/>
+        <property name="cover" column="cover"/>
+    </class>
+</hibernate-mapping>

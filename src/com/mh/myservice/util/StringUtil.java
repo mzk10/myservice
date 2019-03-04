@@ -5,24 +5,22 @@ import java.security.NoSuchAlgorithmException;
 
 public class StringUtil {
 
-	/**
+    /**
      * 获取MD5
+     *
      * @param text
      * @return
      */
-    public static String md5(String text)
-    {
+    public static String md5(String text) {
         String str = null;
-        try
-        {
+        try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             md.update(text.getBytes());
             byte b[] = md.digest();
             int i;
 
             StringBuffer buf = new StringBuffer("");
-            for (int offset = 0; offset < b.length; offset++)
-            {
+            for (int offset = 0; offset < b.length; offset++) {
                 i = b[offset];
                 if (i < 0)
                     i += 256;
@@ -33,11 +31,13 @@ public class StringUtil {
             str = buf.toString().toUpperCase();
             // buf.toString()); // 32位的加密
             // buf.toString().substring(8,24)); // 16位的加密
-        } catch (NoSuchAlgorithmException e)
-        {
+        } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }
         return str;
     }
 
+    public static boolean isEmpty(String string) {
+        return string == null || "".equals(string);
+    }
 }

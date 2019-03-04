@@ -6,8 +6,8 @@ import java.util.Objects;
 @Entity
 @Table(name = "vol", schema = "xiezuo", catalog = "")
 public class VolEntity {
-    private int id;
-    private int bookId;
+    private String id;
+    private String bookid;
     private String content;
     private String volName;
     private int volcount;
@@ -16,27 +16,27 @@ public class VolEntity {
     private int line;
 
     @Id
-    @Column(name = "id", nullable = false)
-    public int getId() {
+    @Column(name = "id")
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
     @Basic
-    @Column(name = "book_id", nullable = false)
-    public int getBookId() {
-        return bookId;
+    @Column(name = "bookid")
+    public String getBookid() {
+        return bookid;
     }
 
-    public void setBookId(int bookId) {
-        this.bookId = bookId;
+    public void setBookid(String bookid) {
+        this.bookid = bookid;
     }
 
     @Basic
-    @Column(name = "content", nullable = true, length = -1)
+    @Column(name = "content")
     public String getContent() {
         return content;
     }
@@ -46,7 +46,7 @@ public class VolEntity {
     }
 
     @Basic
-    @Column(name = "volName", nullable = false, length = 50)
+    @Column(name = "volName")
     public String getVolName() {
         return volName;
     }
@@ -56,7 +56,7 @@ public class VolEntity {
     }
 
     @Basic
-    @Column(name = "volcount", nullable = false)
+    @Column(name = "volcount")
     public int getVolcount() {
         return volcount;
     }
@@ -66,7 +66,7 @@ public class VolEntity {
     }
 
     @Basic
-    @Column(name = "createtime", nullable = true, length = 20)
+    @Column(name = "createtime")
     public String getCreatetime() {
         return createtime;
     }
@@ -76,7 +76,7 @@ public class VolEntity {
     }
 
     @Basic
-    @Column(name = "edittime", nullable = true, length = 20)
+    @Column(name = "edittime")
     public String getEdittime() {
         return edittime;
     }
@@ -86,7 +86,7 @@ public class VolEntity {
     }
 
     @Basic
-    @Column(name = "line", nullable = false)
+    @Column(name = "line")
     public int getLine() {
         return line;
     }
@@ -100,10 +100,10 @@ public class VolEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         VolEntity volEntity = (VolEntity) o;
-        return id == volEntity.id &&
-                bookId == volEntity.bookId &&
-                volcount == volEntity.volcount &&
+        return volcount == volEntity.volcount &&
                 line == volEntity.line &&
+                Objects.equals(id, volEntity.id) &&
+                Objects.equals(bookid, volEntity.bookid) &&
                 Objects.equals(content, volEntity.content) &&
                 Objects.equals(volName, volEntity.volName) &&
                 Objects.equals(createtime, volEntity.createtime) &&
@@ -112,6 +112,6 @@ public class VolEntity {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, bookId, content, volName, volcount, createtime, edittime, line);
+        return Objects.hash(id, bookid, content, volName, volcount, createtime, edittime, line);
     }
 }
