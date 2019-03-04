@@ -7,45 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db18eec7-294a-471d-bd2c-2ec3179cc78a" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/BookAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/BookAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/TestAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/TestAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/UserAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/action/UserAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/core/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/core/Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/BaseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/BaseDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/BookDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/BookDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/LogDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/LogDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/RootuserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/RootuserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/db/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/BookEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/BookEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/FileInfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/FileInfoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/FontEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/FontEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/LogEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/LogEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/ResponseData.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/ResponseData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/Rootuser.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/Rootuser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VersionCheckEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VersionCheckEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VolEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/entity/VolEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/filter/EncodeFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/filter/EncodeFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/AuthCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/AuthCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Base64.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Base64.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/DES3Decoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/DES3Decoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/DES3Encrypter.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/DES3Encrypter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Encrypter.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Encrypter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/FileUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/NameValues.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/com/mh/myservice/util/StringUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myservice/WEB-INF/classes/config.val" beforeDir="false" afterPath="$PROJECT_DIR$/myservice/WEB-INF/classes/config.val" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/action/BookAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/action/BookAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/action/TestAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/core/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/core/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/entity/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/entity/ResponseData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/util/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/util/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/mh/myservice/util/NameValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/mh/myservice/util/ConfigUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.val" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.val" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -193,7 +155,7 @@
           <entry key="val" value="13" />
           <entry key="versioncheck" value="2" />
           <entry key="vol" value="1" />
-          <entry key="xml" value="38" />
+          <entry key="xml" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -208,7 +170,7 @@
           <entry key="PLAIN_TEXT" value="16" />
           <entry key="Scratch" value="15" />
           <entry key="TypeScript" value="1" />
-          <entry key="XML" value="38" />
+          <entry key="XML" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -222,7 +184,7 @@
           <entry key="sql" value="398" />
           <entry key="txt" value="12" />
           <entry key="val" value="98" />
-          <entry key="xml" value="273" />
+          <entry key="xml" value="282" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -234,7 +196,7 @@
           <entry key="PLAIN_TEXT" value="114" />
           <entry key="SQL" value="83" />
           <entry key="Scratch" value="338" />
-          <entry key="XML" value="273" />
+          <entry key="XML" value="282" />
         </counts>
       </usages-collector>
     </session>
@@ -244,7 +206,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/core/Action.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
@@ -259,6 +221,15 @@
                 <element signature="e#14715#14716#0" expanded="true" />
                 <element signature="e#14769#14770#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -392,7 +363,6 @@
         <option value="$PROJECT_DIR$/src/com/mh/myservice/entity/BookEntity.hbm.xml" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/entity/VolEntity.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/entity/VolEntity.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/db/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/util/AuthCode.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/action/RootuserAction.java" />
@@ -403,6 +373,7 @@
         <option value="$PROJECT_DIR$/src/com/mh/myservice/action/UserAction.java" />
         <option value="$PROJECT_DIR$/src/com/mh/myservice/core/Action.java" />
         <option value="$PROJECT_DIR$/src/config.val" />
+        <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
       </list>
     </option>
   </component>
@@ -1189,12 +1160,12 @@
       <workItem from="1545203938176" duration="6366000" />
       <workItem from="1546481582127" duration="6281000" />
       <workItem from="1550825416293" duration="1830000" />
-      <workItem from="1551681619740" duration="17260000" />
+      <workItem from="1551681619740" duration="17344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207799000" />
+    <option name="totallyTimeSpent" value="207883000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1209,7 +1180,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7373737" visible="true" weight="0.21002132" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7373737" visible="true" weight="0.21002132" />
       <window_info id="Structure" order="1" sideWeight="0.50651467" side_tool="true" weight="0.20362474" />
       <window_info id="Web" order="2" sideWeight="0.50769234" side_tool="true" weight="0.20788912" />
       <window_info id="Designer" order="3" />
@@ -1218,7 +1189,7 @@
       <window_info id="Persistence" order="6" sideWeight="0.26262626" side_tool="true" visible="true" weight="0.21002132" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.36789298" />
-      <window_info active="true" anchor="bottom" x="0" y="23" width="1920" height="1017" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.33779263" />
+      <window_info anchor="bottom" x="0" y="23" width="1920" height="1017" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.33779263" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5217391" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1455,13 +1426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mh/myservice/db/BaseDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49">
@@ -1662,6 +1626,13 @@
             <element signature="e#14715#14716#0" expanded="true" />
             <element signature="e#14769#14770#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
         </state>
       </provider>
     </entry>
